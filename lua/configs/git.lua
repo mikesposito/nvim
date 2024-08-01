@@ -10,5 +10,6 @@ return {
   -- Like git cli but better (try :Git)
   'tpope/vim-fugitive',
 
-  'tpope/vim-rhubarb',
+  -- GitHub PRs, issues and reviews
+  require 'plugins.octo',
 }
