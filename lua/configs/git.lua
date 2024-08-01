@@ -2,10 +2,13 @@
 
 return {
   -- Diff
-  {
-    'sindrets/diffview.nvim',
-    config = function()
-      require('diffview').setup()
-    end
-  }
+  require 'plugins.diffview',
+
+  -- Git signs in the gutter
+  require 'plugins.gitsigns',
+
+  -- Like git cli but better (try :Git)
+  'tpope/vim-fugitive',
+
+  'tpope/vim-rhubarb',
 }
