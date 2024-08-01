@@ -59,3 +59,21 @@ nmap('<leader>f', function()
     timeout_ms = 5000,
   }
 end, { desc = 'Format current buffer' })
+
+-- Language Servers
+nmap('<leader>rn', vim.lsp.buf.rename, { desc = '[R]e[n]ame' })
+nmap('<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
+nmap('gd', require('telescope.builtin').lsp_definitions, { desc = '[G]oto [D]efinition' })
+nmap('gr', require('telescope.builtin').lsp_references, { desc = '[G]oto [R]eferences' })
+nmap('gI', require('telescope.builtin').lsp_implementations, { desc = '[G]oto [I]mplementation' })
+nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, { desc = 'Type [D]efinition' })
+nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols' })
+nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = '[W]orkspace [S]ymbols' })
+nmap('K', vim.lsp.buf.hover, { desc = 'Hover Documentation' })
+nmap('<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation' })
+nmap('gD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration' })
+nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, { desc = '[W]orkspace [A]dd Folder' })
+nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, { desc = '[W]orkspace [R]emove Folder' })
+nmap('<leader>wl', function()
+  print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+end, { desc = '[W]orkspace [L]ist Folde rs' })

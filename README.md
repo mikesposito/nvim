@@ -1,4 +1,4 @@
-# dotenv
+# nvim 
 
 My personal nvim configuration files.
 
