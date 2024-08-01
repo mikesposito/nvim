@@ -2,17 +2,17 @@
 
 return {
   -- GitHub Copilot (AI pair programming)
-  {
-    'github/copilot.vim',
-    lazy = false,
-    config = function ()
-      vim.g.copilot_assume_mapped = true
-    end
-  },
+  require 'plugins.copilot',
 
   -- Highlight similar words
-  {
-    'tzachar/local-highlight.nvim',
-  },
-}
+  require 'plugins.local_highlight',
 
+  -- Autocompletion
+  require 'plugins.nvim-cmp',
+
+  -- Comment code
+  'numToStr/Comment.nvim',
+
+  -- Highlight, edit, and navigate code
+  require 'plugins.nvim-treesitter',
+}
