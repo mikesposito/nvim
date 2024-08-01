@@ -229,7 +229,7 @@ require('lazy').setup({
   },
 
   -- import all plugins from the `configs` directory 
-  { import = 'configs' },
+  { import = 'configs', enabled = true },
 }, {})
 
 -- [[ Setting options ]]
