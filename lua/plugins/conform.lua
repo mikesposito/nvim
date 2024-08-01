@@ -4,6 +4,15 @@ return {
     'BufWritePre',
     'BufNewFile',
   },
+  -- keys = {
+  --   { '<leader>f', function()
+  --     require('conform').format({
+  --       lsp_fallback = false,
+  --       async = false,
+  --       timeout_ms = 500
+  --     })
+  --   end, desc = 'Format current buffer' },
+  -- },
   config = function()
     local conform = require('conform')
     conform.setup({
