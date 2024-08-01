@@ -1,3 +1,15 @@
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -42,3 +54,14 @@ vim.o.termguicolors = true
 -- Fix python path
 vim.g.python_host_prog = '/opt/homebrew/bin/python3'
 -- vim.g.node_host_prog = vim.fn.system('nvm which current'):match('(.-)\n') .. '/bin/cli.js'
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})

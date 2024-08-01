@@ -15,7 +15,4 @@ return {
 
   -- Highlight, edit, and navigate code
   require 'plugins.nvim-treesitter',
-
-  -- nvim development
-  require 'plugins.neodev',
 }

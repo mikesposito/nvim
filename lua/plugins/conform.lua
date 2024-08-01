@@ -4,15 +4,6 @@ return {
     'BufWritePre',
     'BufNewFile',
   },
-  -- keys = {
-  --   { '<leader>f', function()
-  --     require('conform').format({
-  --       lsp_fallback = false,
-  --       async = false,
-  --       timeout_ms = 500
-  --     })
-  --   end, desc = 'Format current buffer' },
-  -- },
   config = function()
     local conform = require('conform')
     conform.setup({
@@ -44,24 +35,24 @@ return {
             }
           end,
         },
-        --      typescript = {
-        --        function()
-        --          return {
-        --            exe = 'eslint',
-        --            args = { vim.api.nvim_buf_get_name(0) },
-        --            stdin = true,
-        --          }
-        --        end,
-        --      },
-        --      json = {
-        --        function()
-        --          return {
-        --            exe = 'jq',
-        --            args = { '.' },
-        --            stdin = true,
-        --          }
-        --        end,
-        --      },
+        typescript = {
+          function()
+            return {
+              exe = 'eslint',
+              args = { vim.api.nvim_buf_get_name(0) },
+              stdin = true,
+            }
+          end,
+        },
+        json = {
+          function()
+            return {
+              exe = 'jq',
+              args = { '.' },
+              stdin = true,
+            }
+          end,
+        },
         yaml = {
           function()
             return {
