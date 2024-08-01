@@ -2,12 +2,11 @@
 
 return {
   -- LSP
-  require('plugins.lspconfig'),
+  require 'plugins.lspconfig',
 
   -- Rust
-  require('plugins.rust-tools'),
+  require 'plugins.rust-tools',
 
   -- TypeScript
-  require('plugins.typescript-tools'),
-};
-
+  require 'plugins.typescript-tools',
+}

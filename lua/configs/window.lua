@@ -2,10 +2,10 @@
 
 return {
   -- Tabs in topbar
-  require('plugins.barbar'),
+  require 'plugins.barbar',
 
   -- Filesystem tree view
-  require('plugins.nvim-tree'),
+  require 'plugins.nvim-tree',
 
   -- Terminal in a floating window
   {
@@ -13,13 +13,11 @@ return {
   },
 
   -- Code breadcrumbs in the topbar
-  require('plugins.barbecue'),
+  require 'plugins.barbecue',
 
   -- Statusline
-  require('plugins.lualine'),
-
-  -- Highlight on yanked texts
+  require 'plugins.lualine',
 
   -- Help with keybindings
-  require('plugins.which-key'),
+  require 'plugins.which-key',
 }

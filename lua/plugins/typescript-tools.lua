@@ -1,7 +1,6 @@
 return {
   'pmizio/typescript-tools.nvim',
-  config = function ()
+  config = function()
     require('lspconfig').tsserver.setup {}
-  end
+  end,
 }
-
