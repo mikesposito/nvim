@@ -1,11 +1,73 @@
+Global = vim.g
+Options = vim.opt
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+Global.mapleader = ' '
+Global.maplocalleader = ' '
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- [General Settings]
+Global.loaded_netrw = 1
+Global.loaded_netrwPlugin = 1
+
+-- [Code Assistance Features]
+-- Autocompletion
+Options.assist.autocompletion_enabled = true
+-- Copilot
+Options.assist.copilot_enabled = true
+
+-- [Code formatting features]
+-- Format the document automatically on save
+Options.formatting.format_on_save = true
+
+-- [Git features]
+-- Enable git signs
+Options.git.enable_signs = true
+
+-- [Language features]
+-- Add your favourite languages here
+Options.lang.lsp_servers = {
+  rust_analyzer = {},
+  tsserver = {
+    filetypes = {
+      'typescript',
+      'typescriptreact',
+      'javascript',
+    },
+  },
+  html = {
+    filetypes = {
+      'html',
+      'twig',
+      'hbs',
+    },
+  },
+  lua_ls = {
+    Lua = {
+      workspace = {
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
+      diagnostics = {
+        globals = {
+          'vim',
+        },
+      },
+    },
+  },
+}
+
+-- [Theme options]
+Options.theme.colorscheme = 'github_dark_default'
+
+-- [Window options]
+-- Enable tabs management
+Options.window.tabs_enabled = true
+-- Enable statusline (bottom)
+Options.window.statusline_enabled = true
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
@@ -52,8 +114,8 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Fix python path
-vim.g.python_host_prog = '/opt/homebrew/bin/python3'
--- vim.g.node_host_prog = vim.fn.system('nvm which current'):match('(.-)\n') .. '/bin/cli.js'
+Global.python_host_prog = '/opt/homebrew/bin/python3'
+-- Global.node_host_prog = vim.fn.system('nvm which current'):match('(.-)\n') .. '/bin/cli.js'
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -65,4 +127,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-

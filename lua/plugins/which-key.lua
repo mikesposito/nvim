@@ -1,6 +1,7 @@
 return {
   'folke/which-key.nvim',
   opts = {},
+  lazy = false,
   config = function()
     local lib = require 'which-key'
     lib.register {

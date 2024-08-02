@@ -4,13 +4,16 @@ local eslint_prettier = {
   stop_after_first = true,
 }
 
+-- only enable on events if global preference is enabled
+local execute_on_events = Global.format_on_save and {
+  'BufWritePre',
+  'BufNewFile',
+} or {}
+
 return {
   'stevearc/conform.nvim',
   lazy = true,
-  event = {
-    'BufWritePre',
-    'BufNewFile',
-  },
+  event = execute_on_events,
   config = function()
     local conform = require 'conform'
     conform.setup {
