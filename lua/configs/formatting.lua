@@ -2,7 +2,7 @@
 
 return {
   -- Automatically close brackets, quotes, etc.
-  Options.formatting.autopairs_enabled and require 'plugins.autopairs' or {},
+  Global.formatting_autopairs_enabled and require 'plugins.autopairs' or {},
 
   -- Automatically format code
   require 'plugins.conform',
