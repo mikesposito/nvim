@@ -77,3 +77,39 @@ nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, { desc = '[W]orkspace [R
 nmap('<leader>wl', function()
   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 end, { desc = '[W]orkspace [L]ist Folde rs' })
+
+-- Tab management
+---- Move to previous/next
+nmap('<C-h>', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
+nmap('<C-l>', '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })
+---- Re-order to previous/next
+nmap('<C-<>', '<Cmd>BufferMovePrevious<CR>', { desc = 'Move previous tab' })
+nmap('<C->>', '<Cmd>BufferMoveNext<CR>', { desc = 'Move next tab' })
+---- Goto buffer in position...
+nmap('<C-1>', '<Cmd>BufferGoto 1<CR>', { desc = 'Go to tab 1' })
+nmap('<C-2>', '<Cmd>BufferGoto 2<CR>', { desc = 'Go to tab 2' })
+nmap('<C-3>', '<Cmd>BufferGoto 3<CR>', { desc = 'Go to tab 3' })
+nmap('<C-4>', '<Cmd>BufferGoto 4<CR>', { desc = 'Go to tab 4' })
+nmap('<C-5>', '<Cmd>BufferGoto 5<CR>', { desc = 'Go to tab 5' })
+nmap('<C-6>', '<Cmd>BufferGoto 6<CR>', { desc = 'Go to tab 6' })
+nmap('<C-7>', '<Cmd>BufferGoto 7<CR>', { desc = 'Go to tab 7' })
+nmap('<C-8>', '<Cmd>BufferGoto 8<CR>', { desc = 'Go to tab 8' })
+nmap('<C-9>', '<Cmd>BufferGoto 9<CR>', { desc = 'Go to tab 9' })
+nmap('<C-0>', '<Cmd>BufferLast<CR>', { desc = 'Go to last tab' })
+---- Pin/unpin buffer
+nmap('<A-p>', '<Cmd>BufferPin<CR>', { desc = 'Pin tab' })
+---- Close buffer
+nmap('<C-x>', '<Cmd>BufferClose<CR>', {})
+-- Close commands
+--                 :BufferCloseAllButCurrent
+--                 :BufferCloseAllButPinned
+--                 :BufferCloseAllButCurrentOrPinned
+--                 :BufferCloseBuffersLeft
+--                 :BufferCloseBuffersRight
+-- Magic buffer-picking mode
+nmap('<C-p>', '<Cmd>BufferPick<CR>', {})
+-- Sort automatically by...
+nmap('<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', {})
+nmap('<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', {})
+nmap('<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', {})
+nmap('<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {})
