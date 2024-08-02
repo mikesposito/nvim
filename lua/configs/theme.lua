@@ -10,4 +10,7 @@ return {
 
   -- Indentation guides
   require 'plugins.indent-blankline',
+
+  -- Indentation magic guide
+  require 'plugins.indentscope',
 }
