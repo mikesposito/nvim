@@ -13,21 +13,21 @@ Global.loaded_netrwPlugin = 1
 
 -- [Code Assistance Features]
 -- Autocompletion
-Options.assist.autocompletion_enabled = true
+Global.assist_autocompletion_enabled = true
 -- Copilot
-Options.assist.copilot_enabled = true
+Global.assist_copilot_enabled = true
 
 -- [Code formatting features]
 -- Format the document automatically on save
-Options.formatting.format_on_save = true
+Global.formatting_format_on_save = true
 
 -- [Git features]
 -- Enable git signs
-Options.git.enable_signs = true
+Global.git_enable_signs = true
 
 -- [Language features]
 -- Add your favourite languages here
-Options.lang.lsp_servers = {
+Global.lang_lsp_servers = {
   rust_analyzer = {},
   tsserver = {
     filetypes = {
@@ -60,14 +60,11 @@ Options.lang.lsp_servers = {
   },
 }
 
--- [Theme options]
-Options.theme.colorscheme = 'github_dark_default'
-
 -- [Window options]
 -- Enable tabs management
-Options.window.tabs_enabled = true
+Global.tabs_enabled = true
 -- Enable statusline (bottom)
-Options.window.statusline_enabled = true
+Global.window_statusline_enabled = true
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true

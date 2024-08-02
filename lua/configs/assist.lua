@@ -2,13 +2,13 @@
 
 return {
   -- GitHub Copilot (AI pair programming)
-  Options.assist.copilot_enabled and require 'plugins.copilot' or {},
+  Global.assist_copilot_enabled and require 'plugins.copilot' or {},
 
   -- Highlight similar words
   require 'plugins.local_highlight',
 
   -- Autocompletion
-  Options.assist.autocompletion_enabled and require 'plugins.nvim-cmp' or {},
+  Global.assist_autocompletion_enabled and require 'plugins.nvim-cmp' or {},
 
   -- Comment code
   'numToStr/Comment.nvim',
