@@ -5,7 +5,7 @@ return {
   require 'plugins.diffview',
 
   -- Git signs in the gutter
-  require 'plugins.gitsigns',
+  Options.git.enable_signs and require 'plugins.gitsigns' or {},
 
   -- Like git cli but better (try :Git)
   'tpope/vim-fugitive',

@@ -2,7 +2,7 @@
 
 return {
   -- Tabs in topbar
-  require 'plugins.barbar',
+  Options.window.tabs_enabled and require 'plugins.barbar' or {},
 
   -- Filesystem tree view
   require 'plugins.nvim-tree',
@@ -16,7 +16,7 @@ return {
   require 'plugins.barbecue',
 
   -- Statusline
-  require 'plugins.lualine',
+  Options.window.statusline_enabled and require 'plugins.lualine' or {},
 
   -- Help with keybindings
   require 'plugins.which-key',

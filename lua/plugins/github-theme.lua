@@ -7,6 +7,7 @@ return {
       -- ...
     }
 
-    vim.cmd 'colorscheme github_dark_default'
+    local colorscheme = 'colorscheme' .. Options.theme.colorscheme
+    vim.cmd(colorscheme)
   end,
 }
