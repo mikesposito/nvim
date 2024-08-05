@@ -23,6 +23,7 @@ return {
         lua = { 'stylua' },
         javascript = eslint_prettier,
         typescript = eslint_prettier,
+        html = eslint_prettier,
         json = eslint_prettier,
         yaml = eslint_prettier,
         rust = { 'rustfmt' },

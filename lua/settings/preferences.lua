@@ -1,15 +1,14 @@
 Global = vim.g
-Options = vim.opt
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-Global.mapleader = ' '
-Global.maplocalleader = ' '
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- [General Settings]
-Global.loaded_netrw = 1
-Global.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- [Code Assistance Features]
 -- Autocompletion
@@ -27,7 +26,7 @@ Global.git_enable_signs = true
 
 -- [Language features]
 -- Add your favourite languages here
-Global.lang_lsp_servers = {
+local lang_lsp_servers = {
   rust_analyzer = {},
   tsserver = {
     filetypes = {
@@ -59,6 +58,7 @@ Global.lang_lsp_servers = {
     },
   },
 }
+Global.lang_lsp_servers = lang_lsp_servers
 
 -- [Window options]
 -- Enable tabs management
@@ -111,7 +111,7 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- Fix python path
-Global.python_host_prog = '/opt/homebrew/bin/python3'
+vim.g.python_host_prog = '/opt/homebrew/bin/python3'
 -- Global.node_host_prog = vim.fn.system('nvm which current'):match('(.-)\n') .. '/bin/cli.js'
 
 -- [[ Highlight on yank ]]
