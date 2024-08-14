@@ -77,6 +77,8 @@ nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, { desc = '[W]orkspace [R
 nmap('<leader>wl', function()
   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 end, { desc = '[W]orkspace [L]ist Folde rs' })
+nmap('<C-k>', require('lsp_signature').toggle_float_win, { desc = 'Toggle signature help' })
+nmap('<Leader>k', vim.lsp.buf.signature_help, { desc = 'toggle signature' })
 
 -- Tab management
 if Global.tabs_enabled then

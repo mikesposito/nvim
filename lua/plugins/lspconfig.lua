@@ -5,13 +5,11 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     -- Useful status updates for LSP
-    -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    {
-      'j-hui/fidget.nvim',
-      opts = {},
-    },
+    'j-hui/fidget.nvim',
     -- Additional lua configuration, makes nvim stuff amazing!
     'folke/neodev.nvim',
+    -- Signature help for LSP
+    'ray-x/lsp_signature.nvim',
   },
   config = function()
     require('mason').setup()
@@ -26,12 +24,23 @@ return {
       ensure_installed = vim.tbl_keys(Global.lang_lsp_servers),
     }
 
+    local on_lsp_attach = function(_, bufnr)
+      require('lsp_signature').on_attach({
+        bind = true,
+        hint_enable = false,
+        handler_opts = {
+          border = 'single',
+        },
+      }, bufnr)
+    end
+
     mason_lspconfig.setup_handlers {
       function(server_name)
         require('lspconfig')[server_name].setup {
           capabilities = capabilities,
           settings = Global.lang_lsp_servers[server_name],
           filetypes = (Global.lang_lsp_servers[server_name] or {}).filetypes,
+          on_attach = on_lsp_attach,
         }
       end,
     }
