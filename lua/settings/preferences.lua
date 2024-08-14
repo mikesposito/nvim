@@ -35,6 +35,13 @@ local lang_lsp_servers = {
       'javascript',
     },
   },
+  eslint = {
+    filetypes = {
+      'typescript',
+      'typescriptreact',
+      'javascript',
+    },
+  },
   html = {
     filetypes = {
       'html',
