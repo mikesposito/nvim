@@ -23,4 +23,7 @@ return {
 
   -- Help with keybindings
   require 'main.configs.plugins.which-key',
+
+  -- Smooth navigation between tmux panes
+  require 'main.configs.plugins.nvim-tmux-navigation',
 }

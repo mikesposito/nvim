@@ -43,6 +43,12 @@ nmap('<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 nmap('<C-d>', '<C-d>zz', { noremap = true, silent = true })
 nmap('<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
+-- Tmux panes navigation supports
+nmap('<C-h>', '<Cmd>NvimTmuxNavigateLeft<CR>', { desc = 'Jump to left pane' })
+nmap('<C-l>', '<Cmd>NvimTmuxNavigateRight<CR>', { desc = 'Jump to right pane' })
+nmap('<C-j>', '<Cmd>NvimTmuxNavigateDown<CR>', { desc = 'Jump to down pane' })
+nmap('<C-k>', '<Cmd>NvimTmuxNavigateUp<CR>', { desc = 'Jump to up pane' })
+
 -- Git Related keymaps
 label('<leader>g', '[G]it')
 label('<leader>gh', '[H]unks')
@@ -127,29 +133,25 @@ end, { desc = '[W]orkspace [L]ist Folde rs' })
 nmap('<C-k>', require('lsp_signature').toggle_float_win, { desc = 'Toggle signature help' })
 nmap('<Leader>k', vim.lsp.buf.signature_help, { desc = 'toggle signature' })
 
--- Split windows navigation
-nmap('<C-k>', ':wincmd k<CR>', { desc = 'Move to bottom window split', silent = true })
-nmap('<C-j>', ':wincmd j<CR>', { desc = 'Move to top window split', silent = true })
-
 -- Tab management
 if vim.g.tabs_enabled then
   ---- Move to previous/next
-  nmap('<C-h>', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
-  nmap('<C-l>', '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })
+  nmap('th', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
+  nmap('tl', '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })
   ---- Re-order to previous/next
-  nmap('<C-<>', '<Cmd>BufferMovePrevious<CR>', { desc = 'Move previous tab' })
-  nmap('<C->>', '<Cmd>BufferMoveNext<CR>', { desc = 'Move next tab' })
+  nmap('t<', '<Cmd>BufferMovePrevious<CR>', { desc = 'Move previous tab' })
+  nmap('t>', '<Cmd>BufferMoveNext<CR>', { desc = 'Move next tab' })
   ---- Goto buffer in position...
-  nmap('<C-1>', '<Cmd>BufferGoto 1<CR>', { desc = 'Go to tab 1' })
-  nmap('<C-2>', '<Cmd>BufferGoto 2<CR>', { desc = 'Go to tab 2' })
-  nmap('<C-3>', '<Cmd>BufferGoto 3<CR>', { desc = 'Go to tab 3' })
-  nmap('<C-4>', '<Cmd>BufferGoto 4<CR>', { desc = 'Go to tab 4' })
-  nmap('<C-5>', '<Cmd>BufferGoto 5<CR>', { desc = 'Go to tab 5' })
-  nmap('<C-6>', '<Cmd>BufferGoto 6<CR>', { desc = 'Go to tab 6' })
-  nmap('<C-7>', '<Cmd>BufferGoto 7<CR>', { desc = 'Go to tab 7' })
-  nmap('<C-8>', '<Cmd>BufferGoto 8<CR>', { desc = 'Go to tab 8' })
-  nmap('<C-9>', '<Cmd>BufferGoto 9<CR>', { desc = 'Go to tab 9' })
-  nmap('<C-0>', '<Cmd>BufferLast<CR>', { desc = 'Go to last tab' })
+  nmap('t1', '<Cmd>BufferGoto 1<CR>', { desc = 'Go to tab 1' })
+  nmap('t2', '<Cmd>BufferGoto 2<CR>', { desc = 'Go to tab 2' })
+  nmap('t3', '<Cmd>BufferGoto 3<CR>', { desc = 'Go to tab 3' })
+  nmap('t4', '<Cmd>BufferGoto 4<CR>', { desc = 'Go to tab 4' })
+  nmap('t5', '<Cmd>BufferGoto 5<CR>', { desc = 'Go to tab 5' })
+  nmap('t6', '<Cmd>BufferGoto 6<CR>', { desc = 'Go to tab 6' })
+  nmap('t7', '<Cmd>BufferGoto 7<CR>', { desc = 'Go to tab 7' })
+  nmap('t8', '<Cmd>BufferGoto 8<CR>', { desc = 'Go to tab 8' })
+  nmap('t9', '<Cmd>BufferGoto 9<CR>', { desc = 'Go to tab 9' })
+  nmap('t0', '<Cmd>BufferLast<CR>', { desc = 'Go to last tab' })
   ---- Pin/unpin buffer
   nmap('<A-p>', '<Cmd>BufferPin<CR>', { desc = 'Pin tab' })
   ---- Close buffer
@@ -173,7 +175,3 @@ end
 label('<leader>y', 'Yarn')
 nmap('<leader>ya', require('package-info').install, { desc = '[A]dd package' })
 nmap('<leader>yv', require('package-info').change_version, { desc = 'Change package [V]ersion' })
-
--- Floating terminal keymaps
-label('<leader>t', '[T]erminal')
-nmap('<leader>tt', ':ToggleTerm<CR>', { desc = '[T]oggle terminal', silent = true })
