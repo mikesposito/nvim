@@ -1,5 +1,3 @@
-Global = vim.g
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -12,17 +10,17 @@ vim.g.loaded_netrwPlugin = 1
 
 -- [Code Assistance Features]
 -- Autocompletion
-Global.assist_autocompletion_enabled = true
+vim.g.assist_autocompletion_enabled = true
 -- Copilot
-Global.assist_copilot_enabled = true
+vim.g.assist_copilot_enabled = true
 
 -- [Code formatting features]
 -- Format the document automatically on save
-Global.formatting_format_on_save = true
+vim.g.formatting_format_on_save = true
 
 -- [Git features]
 -- Enable git signs
-Global.git_enable_signs = true
+vim.g.git_enable_signs = true
 
 -- [Language features]
 -- Add your favourite languages here
@@ -65,13 +63,13 @@ local lang_lsp_servers = {
     },
   },
 }
-Global.lang_lsp_servers = lang_lsp_servers
+vim.g.lang_lsp_servers = lang_lsp_servers
 
 -- [Window options]
 -- Enable tabs management
-Global.tabs_enabled = true
+vim.g.tabs_enabled = true
 -- Enable statusline (bottom)
-Global.window_statusline_enabled = true
+vim.g.window_statusline_enabled = true
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
@@ -119,7 +117,7 @@ vim.o.termguicolors = true
 
 -- Fix python path
 vim.g.python_host_prog = '/opt/homebrew/bin/python3'
--- Global.node_host_prog = vim.fn.system('nvm which current'):match('(.-)\n') .. '/bin/cli.js'
+-- vim.g.node_host_prog = vim.fn.system('nvm which current'):match('(.-)\n') .. '/bin/cli.js'
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

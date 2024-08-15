@@ -2,8 +2,8 @@
 
 return {
   -- Debugger
-  require 'plugins.dap',
+  require 'main.configs.plugins.dap',
 
   -- Error linting
-  require 'plugins.trouble',
+  require 'main.configs.plugins.trouble',
 }

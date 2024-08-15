@@ -79,7 +79,7 @@ nmap('<leader>wl', function()
 end, { desc = '[W]orkspace [L]ist Folde rs' })
 
 -- Tab management
-if Global.tabs_enabled then
+if vim.g.tabs_enabled then
   ---- Move to previous/next
   nmap('<C-h>', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
   nmap('<C-l>', '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })
