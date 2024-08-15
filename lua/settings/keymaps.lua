@@ -81,7 +81,7 @@ nmap('<C-k>', require('lsp_signature').toggle_float_win, { desc = 'Toggle signat
 nmap('<Leader>k', vim.lsp.buf.signature_help, { desc = 'toggle signature' })
 
 -- Tab management
-if Global.tabs_enabled then
+if vim.g.tabs_enabled then
   ---- Move to previous/next
   nmap('<C-h>', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
   nmap('<C-l>', '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })

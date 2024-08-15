@@ -16,12 +16,12 @@ return {
 
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = Global.autocompletion_enabled and require('cmp_nvim_lsp').default_capabilities(capabilities) or {}
+    capabilities = vim.g.autocompletion_enabled and require('cmp_nvim_lsp').default_capabilities(capabilities) or {}
 
     local mason_lspconfig = require 'mason-lspconfig'
 
     mason_lspconfig.setup {
-      ensure_installed = vim.tbl_keys(Global.lang_lsp_servers),
+      ensure_installed = vim.tbl_keys(vim.g.lang_lsp_servers),
     }
 
     local on_lsp_attach = function(_, bufnr)
@@ -38,8 +38,8 @@ return {
       function(server_name)
         require('lspconfig')[server_name].setup {
           capabilities = capabilities,
-          settings = Global.lang_lsp_servers[server_name],
-          filetypes = (Global.lang_lsp_servers[server_name] or {}).filetypes,
+          settings = vim.g.lang_lsp_servers[server_name],
+          filetypes = (vim.g.lang_lsp_servers[server_name] or {}).filetypes,
           on_attach = on_lsp_attach,
         }
       end,

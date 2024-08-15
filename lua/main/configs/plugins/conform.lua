@@ -5,7 +5,7 @@ local eslint_prettier = {
 }
 
 -- only enable on events if global preference is enabled
-local execute_on_events = Global.assist_format_on_save and {
+local execute_on_events = vim.g.assist_format_on_save and {
   'BufWritePre',
   'BufNewFile',
 } or {}

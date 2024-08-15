@@ -2,14 +2,14 @@
 
 return {
   -- Diff
-  require 'plugins.diffview',
+  require 'main.configs.plugins.diffview',
 
   -- Git signs in the gutter
-  Global.git_enable_signs and require 'plugins.gitsigns' or {},
+  vim.g.git_enable_signs and require 'main.configs.plugins.gitsigns' or {},
 
   -- Like git cli but better (try :Git)
   'tpope/vim-fugitive',
 
   -- GitHub PRs, issues and reviews
-  require 'plugins.octo',
+  require 'main.configs.plugins.octo',
 }
