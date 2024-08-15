@@ -1,6 +1,8 @@
+local label = require('which-key').register
+
 local nmap = function(key, cmd, opts)
   vim.keymap.set('n', key, cmd, opts)
-  require('which-key').register {
+  label {
     [key] = { name = opts.desc or cmd, _ = 'which_key_ignore' },
   }
 end
@@ -24,24 +26,34 @@ nmap('<C-d>', '<C-d>zz', { noremap = true, silent = true })
 nmap('<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
 -- LazyGit on Floating terminal
+label {
+  ['<leader>g'] = {
+    name = '[G]it',
+  },
+}
 nmap('<leader>gg', ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
 
 -- Telescope keymaps
-nmap('<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+label {
+  ['<leader>s'] = {
+    name = '[S]earch',
+  },
+}
+nmap('<leader>sf', require('telescope.builtin').find_files, { desc = '[F]iles' })
 nmap('<leader>s/', function()
   require('telescope.builtin').live_grep {
     grep_open_files = true,
     prompt_title = 'Live Grep in Open Files',
   }
-end, { desc = '[S]earch [/] in Open Files' })
-nmap('<leader>ss', require('telescope.builtin').builtin, { desc = '[S]earch [S]elect Telescope' })
-nmap('<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
-nmap('<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
-nmap('<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
-nmap('<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
-nmap('<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
-nmap('<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
-nmap('<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+end, { desc = '[/] in Open Files' })
+nmap('<leader>ss', require('telescope.builtin').builtin, { desc = '[S]elect Telescope' })
+nmap('<leader>sgf', require('telescope.builtin').git_files, { desc = '[G]it [F]iles' })
+nmap('<leader>sh', require('telescope.builtin').help_tags, { desc = '[H]elp' })
+nmap('<leader>sw', require('telescope.builtin').grep_string, { desc = 'Current [W]ord' })
+nmap('<leader>sg', require('telescope.builtin').live_grep, { desc = 'by [G]rep' })
+nmap('<leader>sG', ':LiveGrepGitRoot<cr>', { desc = 'by [G]rep on Git Root' })
+nmap('<leader>sd', require('telescope.builtin').diagnostics, { desc = '[D]iagnostics' })
+nmap('<leader>sr', require('telescope.builtin').resume, { desc = '[R]esume' })
 nmap('<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 nmap('<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
 nmap('<leader>/', function()
@@ -117,3 +129,12 @@ if vim.g.tabs_enabled then
   nmap('<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', {})
   nmap('<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', {})
 end
+
+-- Yarn Package management
+label {
+  ['<leader>y'] = {
+    name = 'Yarn',
+  },
+}
+nmap('<leader>ya', require('package-info').install, { desc = '[A]dd package' })
+nmap('<leader>yv', require('package-info').change_version, { desc = 'Change package [V]ersion' })

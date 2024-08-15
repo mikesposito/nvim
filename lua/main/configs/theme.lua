@@ -2,8 +2,8 @@
 
 return {
   -- Main Theme
-  require 'main.configs.plugins.github-theme',
-  -- require('plugins.tokyonight-theme'),
+  require 'main.configs.plugins.tokyonight-theme',
+  -- require 'main.configs.plugins.github-theme',
 
   -- Icons
   require 'main.configs.plugins.web-devicons',

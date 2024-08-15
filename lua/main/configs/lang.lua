@@ -9,4 +9,7 @@ return {
 
   -- TypeScript
   require 'main.configs.plugins.typescript-tools',
+
+  -- Yarn tools
+  require 'main.configs.plugins.package-info',
 }
