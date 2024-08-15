@@ -45,6 +45,7 @@ nmap('<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
 -- Git Related keymaps
 label('<leader>g', '[G]it')
+label('<leader>gh', '[H]unks')
 nmap('<leader>gg', ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
 -- -- Git actions in visual mode
 local gs = require 'gitsigns'
@@ -127,8 +128,8 @@ nmap('<C-k>', require('lsp_signature').toggle_float_win, { desc = 'Toggle signat
 nmap('<Leader>k', vim.lsp.buf.signature_help, { desc = 'toggle signature' })
 
 -- Split windows navigation
-nmap('<C-k>', ':wincmd k<CR>', { desc = 'Move to bottom window split' })
-nmap('<C-j>', ':wincmd j<CR>', { desc = 'Move to top window split' })
+nmap('<C-k>', ':wincmd k<CR>', { desc = 'Move to bottom window split', silent = true })
+nmap('<C-j>', ':wincmd j<CR>', { desc = 'Move to top window split', silent = true })
 
 -- Tab management
 if vim.g.tabs_enabled then
@@ -175,4 +176,4 @@ nmap('<leader>yv', require('package-info').change_version, { desc = 'Change pack
 
 -- Floating terminal keymaps
 label('<leader>t', '[T]erminal')
-nmap('<leader>tt', ':ToggleTerm<CR>', { desc = '[T]oggle terminal' })
+nmap('<leader>tt', ':ToggleTerm<CR>', { desc = '[T]oggle terminal', silent = true })
