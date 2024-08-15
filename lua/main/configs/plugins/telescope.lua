@@ -34,6 +34,9 @@ return {
     -- Enable telescope fzf native, if installed
     telescope.load_extension 'fzf'
 
+    -- Enable telescope package info
+    telescope.load_extension 'package_info'
+
     -- Telescope live_grep in git root
     -- Function to find the git root directory based on the current buffer's path
     local function find_git_root()
