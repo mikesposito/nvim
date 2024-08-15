@@ -133,10 +133,6 @@ end, { desc = '[W]orkspace [L]ist Folde rs' })
 nmap('<C-k>', require('lsp_signature').toggle_float_win, { desc = 'Toggle signature help' })
 nmap('<Leader>k', vim.lsp.buf.signature_help, { desc = 'toggle signature' })
 
--- Split windows navigation
--- nmap('<C-k>', ':wincmd k<CR>', { desc = 'Move to bottom window split', silent = true })
--- nmap('<C-j>', ':wincmd j<CR>', { desc = 'Move to top window split', silent = true })
-
 -- Tab management
 if vim.g.tabs_enabled then
   ---- Move to previous/next
