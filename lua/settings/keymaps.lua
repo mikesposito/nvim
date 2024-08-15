@@ -1,10 +1,28 @@
-local label = require('which-key').register
+--- Add a label to document the keymap
+--- @param key string
+--- @param desc string
+local label = function(key, desc)
+  require('which-key').register {
+    [key] = {
+      name = desc,
+      _ = 'which_key_ignore',
+    },
+  }
+end
 
+--- Map a key in normal mode, adding also a label
+--- for documentation
+--- @param key string
+--- @param cmd string | function
+--- @param opts table
 local nmap = function(key, cmd, opts)
   vim.keymap.set('n', key, cmd, opts)
-  label {
-    [key] = { name = opts.desc or cmd, _ = 'which_key_ignore' },
-  }
+  label(key, opts.desc or cmd)
+end
+
+-- Map a key in visual mode
+local vmap = function(key, cmd, opts)
+  vim.keymap.set('v', key, cmd, opts)
 end
 
 -- Keymaps for better default experience
@@ -25,20 +43,38 @@ nmap('<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 nmap('<C-d>', '<C-d>zz', { noremap = true, silent = true })
 nmap('<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
--- LazyGit on Floating terminal
-label {
-  ['<leader>g'] = {
-    name = '[G]it',
-  },
-}
+-- Git Related keymaps
+label('<leader>g', '[G]it')
+label('<leader>gh', '[H]unks')
 nmap('<leader>gg', ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
+-- -- Git actions in visual mode
+local gs = require 'gitsigns'
+vmap('<leader>ghs', function()
+  gs.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
+end, { desc = 'stage git hunk' })
+vmap('<leader>ghr', function()
+  gs.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
+end, { desc = 'reset git hunk' })
+-- -- Git actions in normal mode
+nmap('<leader>ghs', gs.stage_hunk, { desc = 'git stage hunk' })
+nmap('<leader>ghr', gs.reset_hunk, { desc = 'git reset hunk' })
+nmap('<leader>ghS', gs.stage_buffer, { desc = 'git Stage buffer' })
+nmap('<leader>ghu', gs.undo_stage_hunk, { desc = 'undo stage hunk' })
+nmap('<leader>ghR', gs.reset_buffer, { desc = 'git Reset buffer' })
+nmap('<leader>ghp', gs.preview_hunk, { desc = 'preview git hunk' })
+nmap('<leader>ghb', function()
+  gs.blame_line { full = false }
+end, { desc = 'git blame line' })
+nmap('<leader>ghd', gs.diffthis, { desc = 'git diff against index' })
+nmap('<leader>ghD', function()
+  gs.diffthis '~'
+end, { desc = 'git diff against last commit' })
+-- -- Git toggles in normal mode
+nmap('<leader>gtb', gs.toggle_current_line_blame, { desc = 'toggle git blame line' })
+nmap('<leader>gtd', gs.toggle_deleted, { desc = 'toggle git show deleted' })
 
--- Telescope keymaps
-label {
-  ['<leader>s'] = {
-    name = '[S]earch',
-  },
-}
+-- Search keymaps
+label('<leader>s', '[S]earch')
 nmap('<leader>sf', require('telescope.builtin').find_files, { desc = '[F]iles' })
 nmap('<leader>s/', function()
   require('telescope.builtin').live_grep {
@@ -47,7 +83,6 @@ nmap('<leader>s/', function()
   }
 end, { desc = '[/] in Open Files' })
 nmap('<leader>ss', require('telescope.builtin').builtin, { desc = '[S]elect Telescope' })
-nmap('<leader>sgf', require('telescope.builtin').git_files, { desc = '[G]it [F]iles' })
 nmap('<leader>sh', require('telescope.builtin').help_tags, { desc = '[H]elp' })
 nmap('<leader>sw', require('telescope.builtin').grep_string, { desc = 'Current [W]ord' })
 nmap('<leader>sg', require('telescope.builtin').live_grep, { desc = 'by [G]rep' })
@@ -92,6 +127,10 @@ end, { desc = '[W]orkspace [L]ist Folde rs' })
 nmap('<C-k>', require('lsp_signature').toggle_float_win, { desc = 'Toggle signature help' })
 nmap('<Leader>k', vim.lsp.buf.signature_help, { desc = 'toggle signature' })
 
+-- Split windows navigation
+nmap('<C-k>', ':wincmd k<CR>', { desc = 'Move to bottom window split', silent = true })
+nmap('<C-j>', ':wincmd j<CR>', { desc = 'Move to top window split', silent = true })
+
 -- Tab management
 if vim.g.tabs_enabled then
   ---- Move to previous/next
@@ -131,10 +170,10 @@ if vim.g.tabs_enabled then
 end
 
 -- Yarn Package management
-label {
-  ['<leader>y'] = {
-    name = 'Yarn',
-  },
-}
+label('<leader>y', 'Yarn')
 nmap('<leader>ya', require('package-info').install, { desc = '[A]dd package' })
 nmap('<leader>yv', require('package-info').change_version, { desc = 'Change package [V]ersion' })
+
+-- Floating terminal keymaps
+label('<leader>t', '[T]erminal')
+nmap('<leader>tt', ':ToggleTerm<CR>', { desc = '[T]oggle terminal', silent = true })

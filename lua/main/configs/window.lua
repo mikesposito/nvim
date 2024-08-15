@@ -12,6 +12,9 @@ return {
     'voldikss/vim-floaterm',
   },
 
+  -- Terminal in split window
+  require 'main.configs.plugins.toggleterm',
+
   -- Code breadcrumbs in the topbar
   require 'main.configs.plugins.barbecue',
 
