@@ -38,10 +38,12 @@ nmap('Ds', vim.lsp.buf.signature_help, { desc = '[D]ocument [s]ignature' })
 nmap('Dy', telescope_builtin.lsp_document_symbols, { desc = '[D]ocument s[y]mbols' })
 nmap('Dh', vim.lsp.buf.hover, { desc = '[D]ocumentation [h]over' })
 
--- Language Servers
+-- Code Shortcuts
 label('<leader>c', '[C]ode')
 nmap('<leader>ca', vim.lsp.buf.code_action, { desc = '[C]ode [A]ction' })
 nmap('<leader>cr', vim.lsp.buf.rename, { desc = '[R]ename' })
+---- Code Swap handled by `nvim-treesitter`
+label('<leader>cs', '[C]ode [S]wap')
 
 -- Debug keymaps
 label('<leader>d', '[D]ebug')
