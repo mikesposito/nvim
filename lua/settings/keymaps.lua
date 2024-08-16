@@ -1,41 +1,13 @@
-local which_key = require 'which-key'
 local dap = require 'dap'
 local dapui = require 'dapui'
-local conform = require 'conform'
 local telescope_builtin = require 'telescope.builtin'
-local telescope_themes = require 'telescope.themes'
 local gitsigns = require 'gitsigns'
 local package_info = require 'package-info'
+local utils = require 'main.scripts.utils'
 
---- Add a label to document the keymap
---- @param key string
---- @param desc string
-local label = function(key, desc)
-  which_key.register {
-    [key] = {
-      name = desc,
-      _ = 'which_key_ignore',
-    },
-  }
-end
-
---- Map a key in normal mode, adding also a label
---- for documentation
---- @param key string
---- @param cmd string | function
---- @param opts table
-local nmap = function(key, cmd, opts)
-  vim.keymap.set('n', key, cmd, opts)
-  label(key, opts.desc or '')
-end
-
---- Map a key in visual mode
---- @param key string
---- @param cmd string | function
---- @param opts table
-local vmap = function(key, cmd, opts)
-  vim.keymap.set('v', key, cmd, opts)
-end
+local vmap = utils.vmap
+local nmap = utils.nmap
+local label = utils.label
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -95,12 +67,8 @@ label('<leader>g', '[G]it')
 label('<leader>gh', '[H]unks')
 nmap('<leader>gg', ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
 -- -- Git actions in visual mode
-vmap('<leader>ghs', function()
-  gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-end, { desc = 'stage git hunk' })
-vmap('<leader>ghr', function()
-  gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-end, { desc = 'reset git hunk' })
+vmap('<leader>ghs', utils.git_stage_hunk, { desc = 'stage git hunk' })
+vmap('<leader>ghr', utils.git_reset_hunk, { desc = 'reset git hunk' })
 -- -- Git actions in normal mode
 nmap('<leader>ghs', gitsigns.stage_hunk, { desc = 'git stage hunk' })
 nmap('<leader>ghr', gitsigns.reset_hunk, { desc = 'git reset hunk' })
@@ -108,13 +76,9 @@ nmap('<leader>ghS', gitsigns.stage_buffer, { desc = 'git Stage buffer' })
 nmap('<leader>ghu', gitsigns.undo_stage_hunk, { desc = 'undo stage hunk' })
 nmap('<leader>ghR', gitsigns.reset_buffer, { desc = 'git Reset buffer' })
 nmap('<leader>ghp', gitsigns.preview_hunk, { desc = 'preview git hunk' })
-nmap('<leader>ghb', function()
-  gitsigns.blame_line { full = false }
-end, { desc = 'git blame line' })
+nmap('<leader>ghb', gitsigns.blame_line, { desc = 'git blame line' })
 nmap('<leader>ghd', gitsigns.diffthis, { desc = 'git diff against index' })
-nmap('<leader>ghD', function()
-  gitsigns.diffthis '~'
-end, { desc = 'git diff against last commit' })
+nmap('<leader>ghD', gitsigns.diffthis, { desc = 'git diff against last commit' })
 -- -- Git toggles in normal mode
 nmap('<leader>gtb', gitsigns.toggle_current_line_blame, { desc = 'toggle git blame line' })
 nmap('<leader>gtd', gitsigns.toggle_deleted, { desc = 'toggle git show deleted' })
@@ -122,12 +86,7 @@ nmap('<leader>gtd', gitsigns.toggle_deleted, { desc = 'toggle git show deleted' 
 -- Search keymaps
 label('<leader>s', '[S]earch')
 nmap('<leader>sf', telescope_builtin.find_files, { desc = '[F]iles' })
-nmap('<leader>s/', function()
-  telescope_builtin.current_buffer_fuzzy_find(telescope_themes.get_dropdown {
-    winblend = 10,
-    previewer = false,
-  })
-end, { desc = '[/] Fuzzily search in current buffer' })
+nmap('<leader>s/', utils.fuzzy_search_current_buffer, { desc = '[/] Search in current buffer' })
 nmap('<leader>ss', telescope_builtin.builtin, { desc = '[S]elect Telescope' })
 nmap('<leader>sh', telescope_builtin.help_tags, { desc = '[H]elp' })
 nmap('<leader>sw', telescope_builtin.grep_string, { desc = 'Current [W]ord' })
@@ -139,22 +98,14 @@ nmap('<leader>s?', telescope_builtin.oldfiles, { desc = '[?] Find [R]ecently ope
 nmap('<leader>s<space>', telescope_builtin.buffers, { desc = '[ ] Find open buffers' })
 
 -- Formatting
-nmap('<leader>f', function()
-  conform.format {
-    lsp_fallback = false,
-    async = false,
-    timeout_ms = 5000,
-  }
-end, { desc = '[F]ormat current buffer' })
+nmap('<leader>f', utils.format_buffer, { desc = '[F]ormat current buffer' })
 
 -- Workspace
 label('<leader>w', '[W]orkspace')
 nmap('<leader>ws', telescope_builtin.lsp_dynamic_workspace_symbols, { desc = '[W]orkspace [S]ymbols' })
 nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, { desc = '[W]orkspace [A]dd Folder' })
 nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, { desc = '[W]orkspace [R]emove Folder' })
-nmap('<leader>wl', function()
-  print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-end, { desc = '[W]orkspace [L]ist folders' })
+nmap('<leader>wl', utils.workspace_list_folders, { desc = '[W]orkspace [L]ist folders' })
 
 -- Tab management
 if vim.g.tabs_enabled then
