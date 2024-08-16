@@ -26,4 +26,7 @@ return {
 
   -- Smooth navigation between tmux panes
   require 'main.configs.plugins.nvim-tmux-navigation',
+
+  -- Start screen
+  require 'main.configs.plugins.mini-starter',
 }
