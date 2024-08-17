@@ -36,16 +36,6 @@ Utils.vmap = function(key, cmd, opts)
   vim.keymap.set('v', key, cmd, opts)
 end
 
---- Stage the highlighted hunk
-Utils.git_stage_hunk = function()
-  gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
-end
-
---- Reset the highlighted hunk
-Utils.git_reset_hunk = function()
-  gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
-end
-
 --- Fuzzy search the current buffer
 Utils.fuzzy_search_current_buffer = function()
   telescope_builtin.current_buffer_fuzzy_find(telescope_themes.get_dropdown {

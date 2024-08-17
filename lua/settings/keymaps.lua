@@ -3,7 +3,8 @@ local dapui = require 'dapui'
 local telescope_builtin = require 'telescope.builtin'
 local gitsigns = require 'gitsigns'
 local package_info = require 'package-info'
-local utils = require 'main.scripts.utils'
+local utils = require 'main.snippets.utils'
+local git = require 'main.snippets.git'
 
 local vmap = utils.vmap
 local nmap = utils.nmap
@@ -64,12 +65,14 @@ nmap('<leader>e', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle [E]xplorer' })
 
 -- Git Related keymaps
 label('<leader>g', '[G]it')
+nmap('<leader>gp', git.pull, { desc = '[p]ull' })
+nmap('<leader>gP', git.push, { desc = '[P]ush' })
 nmap('<leader>gg', ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
 nmap('<leader>gd', utils.diff_against_last_commit, { desc = '[D]iff against index' })
 nmap('<leader>gD', gitsigns.diffthis, { desc = '[D]iff against last commit' })
 label('<leader>gh', '[H]unks')
-vmap('<leader>ghs', utils.git_stage_hunk, { desc = 'stage git hunk' })
-vmap('<leader>ghr', utils.git_reset_hunk, { desc = 'reset git hunk' })
+vmap('<leader>ghs', git.stage_hunk, { desc = 'stage git hunk' })
+vmap('<leader>ghr', git.reset_hunk, { desc = 'reset git hunk' })
 nmap('<leader>ghs', gitsigns.stage_hunk, { desc = 'git stage hunk' })
 nmap('<leader>ghr', gitsigns.reset_hunk, { desc = 'git reset hunk' })
 nmap('<leader>ghS', gitsigns.stage_buffer, { desc = 'git Stage buffer' })
