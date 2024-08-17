@@ -68,4 +68,9 @@ Utils.workspace_list_folders = function()
   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 end
 
+--- Diff the current buffer against the index
+Utils.diff_against_last_commit = function()
+  return gitsigns.diffthis '~'
+end
+
 return Utils

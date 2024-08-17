@@ -50,28 +50,26 @@ label('<leader>d', '[D]ebug')
 nmap('<leader>dt', dapui.toggle, { desc = '[D]ebug: [T]oggle UI' })
 nmap('<leader>dc', dap.continue, { desc = '[D]ebug: Start/[C]ontinue' })
 nmap('<leader>db', dap.toggle_breakpoint, { desc = '[D]ebug: Toggle [B]reakpoint' })
----- Debug navigation
-label('<leader>ds', '[D]ebug [S]tep')
-nmap('<leader>dsi', dap.step_into, { desc = 'Debug: Step Into' })
-nmap('<leader>dsj', dap.step_over, { desc = 'Debug: Step Over' })
-nmap('<leader>dso', dap.step_out, { desc = 'Debug: Step Out' })
----- Diagnostics
 nmap('<leader>d[', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 nmap('<leader>d]', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 nmap('<leader>do', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 nmap('<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+label('<leader>ds', '[D]ebug [S]tep')
+nmap('<leader>dsi', dap.step_into, { desc = 'Debug: Step Into' })
+nmap('<leader>dsj', dap.step_over, { desc = 'Debug: Step Over' })
+nmap('<leader>dso', dap.step_out, { desc = 'Debug: Step Out' })
 
 -- File tree keymaps
 nmap('<leader>e', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle [E]xplorer' })
 
 -- Git Related keymaps
 label('<leader>g', '[G]it')
-label('<leader>gh', '[H]unks')
 nmap('<leader>gg', ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
--- -- Git actions in visual mode
+nmap('<leader>gd', utils.diff_against_last_commit, { desc = '[D]iff against index' })
+nmap('<leader>gD', gitsigns.diffthis, { desc = '[D]iff against last commit' })
+label('<leader>gh', '[H]unks')
 vmap('<leader>ghs', utils.git_stage_hunk, { desc = 'stage git hunk' })
 vmap('<leader>ghr', utils.git_reset_hunk, { desc = 'reset git hunk' })
--- -- Git actions in normal mode
 nmap('<leader>ghs', gitsigns.stage_hunk, { desc = 'git stage hunk' })
 nmap('<leader>ghr', gitsigns.reset_hunk, { desc = 'git reset hunk' })
 nmap('<leader>ghS', gitsigns.stage_buffer, { desc = 'git Stage buffer' })
@@ -79,9 +77,6 @@ nmap('<leader>ghu', gitsigns.undo_stage_hunk, { desc = 'undo stage hunk' })
 nmap('<leader>ghR', gitsigns.reset_buffer, { desc = 'git Reset buffer' })
 nmap('<leader>ghp', gitsigns.preview_hunk, { desc = 'preview git hunk' })
 nmap('<leader>ghb', gitsigns.blame_line, { desc = 'git blame line' })
-nmap('<leader>ghd', gitsigns.diffthis, { desc = 'git diff against index' })
-nmap('<leader>ghD', gitsigns.diffthis, { desc = 'git diff against last commit' })
--- -- Git toggles in normal mode
 nmap('<leader>gtb', gitsigns.toggle_current_line_blame, { desc = 'toggle git blame line' })
 nmap('<leader>gtd', gitsigns.toggle_deleted, { desc = 'toggle git show deleted' })
 
@@ -112,13 +107,10 @@ nmap('<leader>wl', utils.workspace_list_folders, { desc = '[W]orkspace [L]ist fo
 -- Tab management
 if vim.g.tabs_enabled then
   label('t', '[T]abs')
-  ---- Move to previous/next
   nmap('th', '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
   nmap('tl', '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })
-  ---- Re-order to previous/next
   nmap('t<', '<Cmd>BufferMovePrevious<CR>', { desc = 'Move previous tab' })
   nmap('t>', '<Cmd>BufferMoveNext<CR>', { desc = 'Move next tab' })
-  ---- Goto buffer in position...
   nmap('t1', '<Cmd>BufferGoto 1<CR>', { desc = 'Go to tab 1' })
   nmap('t2', '<Cmd>BufferGoto 2<CR>', { desc = 'Go to tab 2' })
   nmap('t3', '<Cmd>BufferGoto 3<CR>', { desc = 'Go to tab 3' })
@@ -129,10 +121,8 @@ if vim.g.tabs_enabled then
   nmap('t8', '<Cmd>BufferGoto 8<CR>', { desc = 'Go to tab 8' })
   nmap('t9', '<Cmd>BufferGoto 9<CR>', { desc = 'Go to tab 9' })
   nmap('t0', '<Cmd>BufferLast<CR>', { desc = 'Go to last tab' })
-  ---- Pin/unpin buffer
   nmap('tp', '<Cmd>BufferPin<CR>', { desc = 'Pin tab' })
-  ---- Close buffer
-  nmap('tx', '<Cmd>BufferClose<CR>', {})
+  nmap('tx', '<Cmd>BufferClose<CR>', { desc = 'Close tab' })
 end
 
 -- Yarn Package management
