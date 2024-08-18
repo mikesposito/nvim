@@ -16,3 +16,5 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   { import = 'main.configs', enabled = true },
 }, {})
+
+require 'main.settings.keymaps'

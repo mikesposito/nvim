@@ -2,7 +2,8 @@
 
 return {
   -- Main Theme
-  require 'main.configs.plugins.tokyonight-theme',
+  require 'main.configs.plugins.catppuccin',
+  -- require 'main.configs.plugins.tokyonight-theme',
   -- require 'main.configs.plugins.github-theme',
 
   -- Icons
