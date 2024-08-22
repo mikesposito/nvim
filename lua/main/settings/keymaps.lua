@@ -61,6 +61,9 @@ n(K.DEBUG_STEP_INTO, dap.step_into, { desc = 'Debug: Step Into' })
 n(K.DEBUG_STEP_OVER, dap.step_over, { desc = 'Debug: Step Over' })
 n(K.DEBUG_STEP_OUT, dap.step_out, { desc = 'Debug: Step Out' })
 
+-- Troubles keymaps
+n(K.TROUBLES, '<cmd>Trouble<cr>', { desc = 'Show [T]roubles' })
+
 -- File tree keymaps
 n(K.TOGGLE_EXPLORER, '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle [E]xplorer' })
 
@@ -83,6 +86,18 @@ n(K.GIT_HUNK_PREVIEW, gitsigns.preview_hunk, { desc = 'preview git hunk' })
 n(K.GIT_LINE_BLAME, gitsigns.blame_line, { desc = 'git blame line' })
 n(K.GIT_TOGGLE_BLAME, gitsigns.toggle_current_line_blame, { desc = 'toggle git blame line' })
 n(K.GIT_TOGGLE_SHOW_DELETED, gitsigns.toggle_deleted, { desc = 'toggle git show deleted' })
+
+-- GitHub keymaps
+label(K.GITHUB_, '[G]ithub')
+label(K.GITHUB_PR_, '[P]ull requests')
+n(K.GITHUB_PR_LIST, '<cmd>Octo pr list<cr>', { desc = '[L]ist' })
+n(K.GITHUB_PR_SHOW, '<cmd>Octo pr show<cr>', { desc = '[S]how' })
+n(K.GITHUB_PR_SHOW_CHANGES, '<cmd>Octo pr changes<cr>', { desc = '[C]hanges' })
+label(K.GITHUB_ISSUE_, '[I]ssues')
+n(K.GITHUB_ISSUE_LIST, '<cmd>Octo issue list<cr>', { desc = '[L]ist' })
+label(K.GITHUB_REVIEW_, '[R]eview')
+n(K.GITHUB_REVIEW_START, '<cmd>Octo review start<cr>', { desc = 'Start Review' })
+n(K.GITHUB_REVIEW_RESUME, '<cmd>Octo review resume<cr>', { desc = 'Resume Review' })
 
 -- Search keymaps
 label(K.SEARCH_, '[S]earch')

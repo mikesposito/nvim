@@ -62,6 +62,12 @@ local lang_lsp_servers = {
       },
     },
   },
+  vimls = {
+    filetypes = {
+      'vim',
+    },
+    Vim = {},
+  },
 }
 vim.g.lang_lsp_servers = lang_lsp_servers
 
