@@ -40,8 +40,11 @@ K.DEBUG_OPEN_DIAGNOSTIC = lead .. 'do'
 K.DEBUG_OPEN_DIAGNOSTIC_LIST = lead .. 'dl'
 K.DEBUG_STEP_ = lead .. 'ds'
 K.DEBUG_STEP_INTO = lead .. 'dsi'
-K.DEBUG_STEP_OVER = lead .. 'dsj'
-K.DEBUG_STEP_OUT = lead .. 'dso'
+K.DEBUG_STEP_OVER = lead .. 'dso'
+K.DEBUG_STEP_OUT = lead .. 'dsO'
+
+--- Troubles
+K.TROUBLES = lead .. 'T'
 
 --- Window keymaps
 K.TOGGLE_EXPLORER = lead .. 'e'
@@ -63,6 +66,18 @@ K.GIT_HUNK_PREVIEW = lead .. 'ghp'
 K.GIT_LINE_BLAME = lead .. 'ghb'
 K.GIT_TOGGLE_BLAME = lead .. 'gtb'
 K.GIT_TOGGLE_SHOW_DELETED = lead .. 'gtd'
+
+--- GitHub
+K.GITHUB_ = lead .. 'G'
+K.GITHUB_PR_ = lead .. 'Gp'
+K.GITHUB_PR_LIST = lead .. 'Gpl'
+K.GITHUB_PR_SHOW = lead .. 'Gps'
+K.GITHUB_PR_SHOW_CHANGES = lead .. 'Gpc'
+K.GITHUB_ISSUE_ = lead .. 'Gi'
+K.GITHUB_ISSUE_LIST = lead .. 'Gil'
+K.GITHUB_REVIEW_ = lead .. 'Gr'
+K.GITHUB_REVIEW_START = lead .. 'Grs'
+K.GITHUB_REVIEW_RESUME = lead .. 'Grr'
 
 --- Search utilities
 K.SEARCH_ = lead .. 's'
