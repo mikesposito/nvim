@@ -15,4 +15,7 @@ return {
 
   -- Highlight, edit, and navigate code
   require 'main.configs.plugins.nvim-treesitter',
+
+  -- Markdown preview
+  require 'main.configs.plugins.markdown-preview',
 }
