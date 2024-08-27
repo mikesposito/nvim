@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = function()
     require('catppuccin').setup {
-      flavour = 'mocha',
+      flavour = vim.g.theme_flavor,
       integrations = {
         cmp = true,
         gitsigns = true,

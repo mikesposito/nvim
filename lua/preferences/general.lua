@@ -18,6 +18,10 @@ vim.g.assist_copilot_enabled = true
 -- Format the document automatically on save
 vim.g.formatting_format_on_save = true
 
+-- [Theme flavor]
+-- Set the theme flavor [mocha, latte]
+vim.g.theme_flavor = 'mocha'
+
 -- [Git features]
 -- Enable git signs
 vim.g.git_enable_signs = true

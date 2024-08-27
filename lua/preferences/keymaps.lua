@@ -47,7 +47,9 @@ K.DEBUG_STEP_OUT = lead .. 'dsO'
 K.TROUBLES = lead .. 'T'
 
 --- Window keymaps
-K.TOGGLE_EXPLORER = lead .. 'e'
+K.WINDOW_ = lead .. 'w'
+K.WINDOW_TOGGLE_EXPLORER = lead .. 'we'
+K.WINDOW_TOGGLE_SYMBOLS = lead .. 'ws'
 
 --- Git related keymaps
 K.GIT_ = lead .. 'g'
@@ -92,6 +94,7 @@ K.SEARCH_DIAGNOSTICS = lead .. 'sd'
 K.SEARCH_RESUME = lead .. 'sr'
 K.SEARCH_RECENT_FILES = lead .. 's?'
 K.SEARCH_OPEN_BUFFERS = lead .. 's<space>'
+K.SEARCH_SYMBOLS = lead .. 'sa'
 
 --- Formatting keymaps
 K.FORMAT_CURRENT_BUFFER = lead .. 'f'
