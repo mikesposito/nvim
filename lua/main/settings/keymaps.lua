@@ -65,7 +65,9 @@ n(K.DEBUG_STEP_OUT, dap.step_out, { desc = 'Debug: Step Out' })
 n(K.TROUBLES, '<cmd>Trouble<cr>', { desc = 'Show [T]roubles' })
 
 -- File tree keymaps
-n(K.TOGGLE_EXPLORER, '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle [E]xplorer' })
+label(K.WINDOW_, '[W]indow')
+n(K.WINDOW_TOGGLE_EXPLORER, '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle [E]xplorer' })
+n(K.WINDOW_TOGGLE_SYMBOLS, '<cmd>AerialToggle<cr>', { desc = '[S]ymbols' })
 
 -- Git Related keymaps
 label(K.GIT_, '[G]it')

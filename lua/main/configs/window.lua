@@ -29,4 +29,7 @@ return {
 
   -- Start screen
   require 'main.configs.plugins.mini-starter',
+
+  -- Symbol navigation
+  require 'main.configs.plugins.aerial',
 }
