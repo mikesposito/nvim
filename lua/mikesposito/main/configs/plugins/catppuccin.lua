@@ -1,10 +1,12 @@
+local P = require 'mikesposito.preferences.general'
+
 return {
   'catppuccin/nvim',
   name = 'catppuccin',
   priority = 1000,
   config = function()
     require('catppuccin').setup {
-      flavour = vim.g.theme_flavor,
+      flavour = P.THEME_FLAVOUR,
       integrations = {
         cmp = true,
         gitsigns = true,

@@ -3,9 +3,9 @@ local dapui = require 'dapui'
 local telescope_builtin = require 'telescope.builtin'
 local gitsigns = require 'gitsigns'
 local package_info = require 'package-info'
-local utils = require 'main.snippets.utils'
-local git = require 'main.snippets.git'
-local K = require 'preferences.keymaps'
+local utils = require 'mikesposito.main.snippets.utils'
+local git = require 'mikesposito.main.snippets.git'
+local K = require 'mikesposito.preferences.keymaps'
 
 local v = utils.vmap
 local n = utils.nmap

@@ -1,3 +1,5 @@
+local P = require 'mikesposito.preferences.general'
+
 local eslint_prettier = {
   'eslint',
   'prettier',
@@ -5,7 +7,7 @@ local eslint_prettier = {
 }
 
 -- only enable on events if global preference is enabled
-local execute_on_events = vim.g.assist_format_on_save and {
+local execute_on_events = P.CODE_FORMAT_ON_SAVE and {
   'BufWritePre',
   'BufNewFile',
 } or {}
