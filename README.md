@@ -2,19 +2,25 @@
 
 My personal nvim configuration files.
 
+![screenshot](./.github/assets/screenshot.png)
+
 ## Quickstart
 
 ### Prerequisites
+
+WIP
 
 ### Installation
 
 ## Configuration 
 
 The main editor preferences can be found in `lua/preferences`:
-- `lua/preferences/general.lua`: General editor preferences
-- `lua/preferences/keymaps.lua`: Key assignments
+- `lua/mikesposito/preferences/general.lua`: General editor preferences
+- `lua/mikesposito/preferences/keymaps.lua`: Key assignments
 
 ## What's included? 
+
+WIP: List to be completed
  
 ### Default keymaps 
 
@@ -84,26 +90,3 @@ The main editor preferences can be found in `lua/preferences`:
 | `<space>gtb` | Toggle blame |
 | `<space>gtd` | Toggle show deleted |
 
-## What's included?
-Configurations are divided in categories, and each of these categories includes one or more plugins
-- Code Assistance
-    - `copilot`
-        - The GitHub AI code assistance plugin
-    - `autopairs`
-        - Close brackets and quotes automatically
-- Debugging
-    - `delve`
-- Filesystem search
-    - `fzf`
-    - `telescope`
-- Git
-    - `diffview`
-        - Neat diffs
-    - `gitsigns`
-        - Versioning icons on the editor side
-    - `vim-fugitive`
-    - `octo`
-        - Github reviews made nice
-- Language servers
-- Theme
-- Window
