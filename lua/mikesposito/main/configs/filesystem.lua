@@ -6,5 +6,5 @@ return {
   'junegunn/fzf.vim',
 
   -- Absolutely gorgeous fuzzy finder
-  require 'main.configs.plugins.telescope',
+  require 'mikesposito.main.configs.plugins.telescope',
 }

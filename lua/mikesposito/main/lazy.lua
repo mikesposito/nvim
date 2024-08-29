@@ -13,8 +13,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+require 'mikesposito.main.settings.preferences'
+
 require('lazy').setup({
-  { import = 'main.configs', enabled = true },
+  { import = 'mikesposito.main.configs', enabled = true },
 }, {})
 
-require 'main.settings.keymaps'
+require 'mikesposito.main.settings.keymaps'
