@@ -6,6 +6,7 @@ local package_info = require 'package-info'
 local utils = require 'mikesposito.main.snippets.utils'
 local git = require 'mikesposito.main.snippets.git'
 local K = require 'mikesposito.preferences.keymaps'
+local P = require 'mikesposito.preferences.general'
 
 local v = utils.vmap
 local n = utils.nmap
@@ -119,7 +120,7 @@ n(K.SEARCH_OPEN_BUFFERS, telescope_builtin.buffers, { desc = '[ ] Find open buff
 n(K.FORMAT_CURRENT_BUFFER, utils.format_buffer, { desc = '[F]ormat current buffer' })
 
 -- Tab management
-if vim.g.tabs_enabled then
+if P.WINDOW_TABS_ENABLED then
   label(K.TABS_, '[T]abs')
   n(K.TABS_GOTO_PREVIOUS, '<Cmd>BufferPrevious<CR>', { desc = 'Previous Tab' })
   n(K.TABS_GOTO_NEXT, '<Cmd>BufferNext<CR>', { desc = 'Next Tab' })

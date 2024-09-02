@@ -26,7 +26,7 @@ P.WINDOW_TABS_ENABLED = true
 -- Enable statusline (bottom)
 P.WINDOW_STATUS_LINE_ENABLED = true
 -- Open code outline on editor startup
-P.WINDOW_OPEN_OUTLINE_ON_STARTUP = true
+P.WINDOW_OPEN_OUTLINE_ON_STARTUP = false
 -- Set highlight on search
 P.WINDOW_HIGHLIGHT_ON_SEARCH = false
 -- Make line numbers default
@@ -73,6 +73,11 @@ local lang_lsp_servers = {
       'typescript',
       'typescriptreact',
       'javascript',
+    },
+  },
+  clangd = {
+    filetypes = {
+      'cpp',
     },
   },
   html = {

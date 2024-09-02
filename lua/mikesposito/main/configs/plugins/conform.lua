@@ -29,12 +29,17 @@ return {
         json = eslint_prettier,
         yaml = eslint_prettier,
         rust = { 'rustfmt' },
+        cpp = { 'clang-format' },
       },
       format_on_save = {
         lsp_fallback = false,
         async = false,
         timeout_ms = 500,
       },
+    }
+
+    conform.formatters.cpp = {
+      args = { '--indent-spaces=2' },
     }
   end,
 }
