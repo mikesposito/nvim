@@ -78,6 +78,8 @@ local lang_lsp_servers = {
   clangd = {
     filetypes = {
       'cpp',
+      'cc',
+      'c',
     },
   },
   html = {
