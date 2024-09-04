@@ -37,9 +37,5 @@ return {
         timeout_ms = 500,
       },
     }
-
-    conform.formatters.cpp = {
-      args = { '--indent-spaces=2' },
-    }
   end,
 }
