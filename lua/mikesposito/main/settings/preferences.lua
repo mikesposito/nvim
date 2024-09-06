@@ -24,7 +24,9 @@ vim.o.relativenumber = P.WINDOW_SHOW_RELATIVE_NUMBERS
 vim.o.cursorline = P.WINDOW_SHOW_CURSOR_LINE
 
 -- Enable mouse mode
-vim.o.mouse = P.WINDOW_MOUSE_MODE_ENABLED and 'a'
+if P.WINDOW_MOUSE_MODE_ENABLED then
+  vim.o.mouse = 'a'
+end
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
