@@ -1,10 +1,9 @@
+local P = require 'mikesposito.preferences.general'
 -- Configuration for colorschemes and themes
 
 return {
-  -- mikesposito.main.Theme
-  require 'mikesposito.main.configs.plugins.catppuccin',
-  -- require 'mikesposito.main.configs.plugins.tokyonight-theme',
-  -- require 'mikesposito.main.configs.plugins.github-theme',
+  -- Main theme (you change it in lua/preferences/general)
+  require(P.THEME),
 
   -- Icons
   require 'mikesposito.main.configs.plugins.web-devicons',

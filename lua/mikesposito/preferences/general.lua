@@ -12,9 +12,9 @@ P.CODE_COPILOT_ENABLED = true
 -- Format the document automatically on save
 P.CODE_FORMAT_ON_SAVE = true
 
--- [Theme flavor]
--- Set the theme flavor [mocha, latte]
-P.THEME_FLAVOUR = 'mocha'
+-- [Theme]
+P.THEME = 'mikesposito.main.configs.plugins.onedark-pro'
+P.THEME_COLOR_SCHEME = 'onedark_dark'
 
 -- [Git features]
 -- Enable git signs
@@ -36,7 +36,7 @@ P.WINDOW_SHOW_RELATIVE_NUMBERS = true
 -- Enable cursor line
 P.WINDOW_SHOW_CURSOR_LINE = true
 -- Enable mouse mode
-P.WINDOW_MOUSE_MODE_ENABLED = true
+P.WINDOW_MOUSE_MODE_ENABLED = false
 
 -- Sync clipboard between OS and Neovim.
 P.USE_SYSTEM_CLIPBOARD = true
@@ -60,7 +60,12 @@ P.UPDATE_TIMEOUT = 300
 -- [Language features]
 -- Add your favourite languages here
 local lang_lsp_servers = {
-  rust_analyzer = {},
+  rust_analyzer = {
+    filetypes = {
+      'rust',
+      'toml',
+    },
+  },
   tsserver = {
     filetypes = {
       'typescript',
