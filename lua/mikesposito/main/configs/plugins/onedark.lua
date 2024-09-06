@@ -5,7 +5,7 @@ return {
   config = function()
     local onedark = require 'onedark'
     onedark.setup {
-      style = P.THEME_FLAVOUR,
+      style = P.THEME_COLOR_SCHEME,
     }
     onedark.load()
   end,

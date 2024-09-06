@@ -6,7 +6,7 @@ return {
   priority = 1000,
   config = function()
     require('catppuccin').setup {
-      flavour = P.THEME_FLAVOUR,
+      flavour = P.THEME_COLOR_SCHEME,
       integrations = {
         cmp = true,
         gitsigns = true,
