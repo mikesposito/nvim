@@ -66,7 +66,7 @@ local lang_lsp_servers = {
       'toml',
     },
   },
-  tsserver = {
+  ts_ls = {
     filetypes = {
       'typescript',
       'typescriptreact',
