@@ -20,4 +20,7 @@ return {
 
   -- Markdown preview
   require 'mikesposito.main.configs.plugins.markdown-preview',
+
+  -- TODOs highlighting
+  require 'mikesposito.main.configs.plugins.todo-comments',
 }
