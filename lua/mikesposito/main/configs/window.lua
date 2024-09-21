@@ -7,7 +7,7 @@ return {
   P.WINDOW_TABS_ENABLED and require 'mikesposito.main.configs.plugins.barbar' or {},
 
   -- Filesystem tree view
-  require 'mikesposito.main.configs.plugins.nvim-tree',
+  require 'mikesposito.main.configs.plugins.neo-tree',
 
   -- Terminal in a floating window
   {
