@@ -10,11 +10,8 @@ local Utils = {}
 --- @param key string
 --- @param desc string
 Utils.label = function(key, desc)
-  which_key.register {
-    [key] = {
-      name = desc,
-      _ = 'which_key_ignore',
-    },
+  which_key.add {
+    { key, desc = desc },
   }
 end
 
