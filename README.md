@@ -1,6 +1,6 @@
 # nvim 
 
-My personal nvim configuration files.
+My personal Neovim configuration files.
 
 ![screenshot](./.github/assets/screenshot.png)
 
@@ -8,15 +8,39 @@ My personal nvim configuration files.
 
 ### Prerequisites
 
-WIP
+- [Neovim](https://neovim.io/)
+- [Lazygit](https://github.com/jesseduffield/lazygit) - The only graphical git interface you'll ever need
+- [Ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation) - For fast search
+- [gh](https://cli.github.com/) - For nice GitHub integrations (e.g. PR list, issue list, reviews, etc)
+- (Optional) [Fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation) - For ludicrous fast fuzzy search
 
 ### Installation
+
+1. Backup your current nvim configuration files
+
+```bash
+mv ~/.config/nvim ~/.config/nvim.bak
+```
+
+2. Clone this repository
+
+```bash
+git clone https://github.com/mikesposito/nvim ~/.config/nvim
+```
+
+3. Open nvim and wait for the plugins to be installed
+
+```bash
+nvim
+```
 
 ## Configuration 
 
 The main editor preferences can be found in `lua/preferences`:
 - `lua/mikesposito/preferences/general.lua`: General editor preferences
 - `lua/mikesposito/preferences/keymaps.lua`: Key assignments
+
+You can add any custom configuration in the `lua/custom` folder, so you can keep pulling updates from this repository without conflicts.
 
 ## What's included? 
 
