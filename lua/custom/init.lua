@@ -1,0 +1,4 @@
+-- You can use this file as entrypoint for you custom configuration,
+-- so that you can continue pulling updates from the main repository
+-- if you fork this project, so that you can keep your custom configuration
+-- without having to resolve conflicts on every pull.
