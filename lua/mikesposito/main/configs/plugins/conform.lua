@@ -1,4 +1,4 @@
-local P = require 'mikesposito.preferences.general'
+local P = require 'custom.preferences'
 
 local eslint_prettier = {
   'eslint',
@@ -30,6 +30,7 @@ return {
         yaml = eslint_prettier,
         rust = { 'rustfmt' },
         cpp = { 'clang-format' },
+        go = { 'gofmt', 'gofumpt' },
       },
       format_on_save = {
         lsp_fallback = false,
