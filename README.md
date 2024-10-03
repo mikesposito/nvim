@@ -36,9 +36,11 @@ nvim
 
 ## Configuration 
 
-The main editor preferences can be found in `lua/preferences`:
-- `lua/mikesposito/preferences/general.lua`: General editor preferences
-- `lua/mikesposito/preferences/keymaps.lua`: Key assignments
+### Preferences
+
+The default editor preferences can be found here:
+- `lua/custom/preferences.lua`: General editor preferences
+- `lua/custom/keymaps.lua`: Key bindings 
 
 You can add any custom configuration in the `lua/custom` folder, so you can keep pulling updates from this repository without conflicts.
 

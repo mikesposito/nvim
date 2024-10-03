@@ -1,4 +1,4 @@
-local P = require 'mikesposito.preferences.general'
+local P = require 'custom.preferences'
 
 return {
   'rmehri01/onenord.nvim',
