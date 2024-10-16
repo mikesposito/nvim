@@ -22,4 +22,8 @@ Git.reset_hunk = function()
   gitsigns.reset_hunk { vim.fn.line '.', vim.fn.line 'v' }
 end
 
+Git.copy_permalink = function(mode)
+  require('gitlinker').get_buf_range_url(mode, { action_callback = require('gitlinker.actions').copy_to_clipboard })
+end
+
 return Git

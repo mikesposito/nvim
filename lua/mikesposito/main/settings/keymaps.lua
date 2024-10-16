@@ -89,6 +89,12 @@ n(K.GIT_HUNK_PREVIEW, gitsigns.preview_hunk, { desc = 'preview git hunk' })
 n(K.GIT_LINE_BLAME, gitsigns.blame_line, { desc = 'git blame line' })
 n(K.GIT_TOGGLE_BLAME, gitsigns.toggle_current_line_blame, { desc = 'toggle git blame line' })
 n(K.GIT_TOGGLE_SHOW_DELETED, gitsigns.toggle_deleted, { desc = 'toggle git show deleted' })
+n(K.GIT_COPY_PERMALINK, function()
+  git.copy_permalink 'n'
+end, { desc = '[Y]ank permalink' })
+v(K.GIT_COPY_PERMALINK, function()
+  git.copy_permalink 'v'
+end, { desc = '[Y]ank permalink' })
 
 -- GitHub keymaps
 label(K.GITHUB_, '[G]ithub')

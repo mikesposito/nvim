@@ -13,4 +13,7 @@ return {
 
   -- GitHub PRs, issues and reviews
   require 'mikesposito.main.configs.plugins.octo',
+
+  -- Git permalinks
+  require 'mikesposito.main.configs.plugins.gitlinker',
 }

@@ -68,6 +68,7 @@ K.GIT_HUNK_PREVIEW = lead .. 'ghp'
 K.GIT_LINE_BLAME = lead .. 'ghb'
 K.GIT_TOGGLE_BLAME = lead .. 'gtb'
 K.GIT_TOGGLE_SHOW_DELETED = lead .. 'gtd'
+K.GIT_COPY_PERMALINK = lead .. 'gy'
 
 --- GitHub
 K.GITHUB_ = lead .. 'G'
