@@ -22,7 +22,12 @@ n('j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 ---- Better pagination
 n('<C-d>', '<C-d>zz', { noremap = true, silent = true })
 n('<C-u>', '<C-u>zz', { noremap = true, silent = true })
----- Tmux panes navigation supports
+
+-- Panel splitting
+n(K.SPLIT_HORIZONTAL, '<Cmd>split<CR>', { desc = 'Split horizontally' })
+n(K.SPLIT_VERTICAL, '<Cmd>vsplit<CR>', { desc = 'Split vertically' })
+
+---- Panel navigation supports
 n(K.JUMP_TO_LEFT_PANE, '<Cmd>NvimTmuxNavigateLeft<CR>', { desc = 'Jump to left pane' })
 n(K.JUMP_TO_RIGHT_PANE, '<Cmd>NvimTmuxNavigateRight<CR>', { desc = 'Jump to right pane' })
 n(K.JUMP_TO_BOTTOM_PANE, '<Cmd>NvimTmuxNavigateDown<CR>', { desc = 'Jump to down pane' })
