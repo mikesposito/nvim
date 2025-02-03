@@ -34,7 +34,4 @@ return {
 
   -- Symbol navigation
   require 'mikesposito.main.configs.plugins.aerial',
-
-  -- Nice notifications and messages
-  require 'mikesposito.main.configs.plugins.noice',
 }
