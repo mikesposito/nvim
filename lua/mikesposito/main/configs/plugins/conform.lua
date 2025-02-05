@@ -32,7 +32,7 @@ return {
         rust = { 'rustfmt' },
         cpp = { 'clang-format' },
         go = { 'gofmt', 'gofumpt' },
-        solidity = { eslint_prettier },
+        solidity = eslint_prettier,
       },
       format_on_save = {
         lsp_fallback = false,
