@@ -31,6 +31,7 @@ return {
         yaml = eslint_prettier,
         rust = { 'rustfmt' },
         cpp = { 'clang-format' },
+        go = { 'gofmt', 'gofumpt' },
         solidity = eslint_prettier,
       },
       format_on_save = {
