@@ -54,6 +54,10 @@ K.TROUBLES = lead .. 'T'
 K.WINDOW_ = lead .. 'w'
 K.WINDOW_TOGGLE_EXPLORER = lead .. 'we'
 K.WINDOW_TOGGLE_SYMBOLS = lead .. 'ws'
+K.WINDOW_TOGGLE_TERMINAL = lead .. 'wt'
+
+--- Diff keymaps
+K.DIFF_SHOW = lead .. 'D'
 
 --- Git related keymaps
 K.GIT_ = lead .. 'g'

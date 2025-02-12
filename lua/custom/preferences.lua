@@ -13,8 +13,13 @@ local P = require 'mikesposito.main.defaults.preferences'
 -- P.CODE_FORMAT_ON_SAVE = true
 --
 -- -- [Theme]
--- P.THEME = 'mikesposito.main.configs.plugins.onedark-pro'
--- P.THEME_COLOR_SCHEME = 'onedark_dark'
+P.THEME = 'mikesposito.main.configs.plugins.onedark'
+P.THEME_COLOR_SCHEME = 'deep'
+--
+-- [UI]
+-- Enable dimming of inactive code
+P.CODE_TWILIGHT_ENABLED = true
+--
 --
 -- -- [Git features]
 -- -- Enable git signs

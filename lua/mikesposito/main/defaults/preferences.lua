@@ -16,6 +16,10 @@ P.CODE_FORMAT_ON_SAVE = true
 P.THEME = 'mikesposito.main.configs.plugins.onedark-pro'
 P.THEME_COLOR_SCHEME = 'onedark_dark'
 
+-- [UI]
+-- Enable dimming of inactive code
+P.CODE_TWILIGHT_ENABLED = false
+
 -- [Git features]
 -- Enable git signs
 P.GIT_SIGNS_ENABLED = true
