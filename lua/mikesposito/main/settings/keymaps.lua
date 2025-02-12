@@ -70,16 +70,20 @@ n(K.DEBUG_STEP_OUT, dap.step_out, { desc = 'Debug: Step Out' })
 -- Troubles keymaps
 n(K.TROUBLES, '<cmd>Trouble<cr>', { desc = 'Show [T]roubles' })
 
--- File tree keymaps
+-- Window keymaps
 label(K.WINDOW_, '[W]indow')
 n(K.WINDOW_TOGGLE_EXPLORER, '<Cmd>Neotree<CR>', { desc = 'Open file [E]xplorer' })
 n(K.WINDOW_TOGGLE_SYMBOLS, '<cmd>AerialToggle<cr>', { desc = '[S]ymbols' })
+n(K.WINDOW_TOGGLE_TERMINAL, '<Cmd>FloatermToggle<CR>', { desc = 'Toggle [T]erminal' })
+
+-- Diff keymaps
+n(K.DIFF_SHOW, '<Cmd>DiffviewOpen<CR>', { desc = '[D]iff' })
 
 -- Git Related keymaps
 label(K.GIT_, '[G]it')
 n(K.GIT_PULL, git.pull, { desc = '[p]ull' })
 n(K.GIT_PUSH, git.push, { desc = '[P]ush' })
-n(K.GIT_OPEN_LAZY_GIT, ':FloatermNew lazygit<cr>', { desc = 'Open lazygit' })
+n(K.GIT_OPEN_LAZY_GIT, ':FloatermNew --height=0.99 --width=0.99 lazygit<cr>', { desc = 'Open lazygit' })
 n(K.GIT_DIFF_INDEX, utils.diff_against_last_commit, { desc = '[D]iff against index' })
 n(K.GIT_DIFF_LAST_COMMIT, gitsigns.diffthis, { desc = '[D]iff against last commit' })
 label(K.GIT_HUNK_, '[H]unks')
