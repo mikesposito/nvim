@@ -55,6 +55,7 @@ K.WINDOW_ = lead .. 'w'
 K.WINDOW_TOGGLE_EXPLORER = lead .. 'we'
 K.WINDOW_TOGGLE_SYMBOLS = lead .. 'ws'
 K.WINDOW_TOGGLE_TERMINAL = lead .. 'wt'
+K.WINDOW_TERMINAL_EXIT_INSERT = '<C-n>'
 
 --- Diff keymaps
 K.DIFF_SHOW = lead .. 'D'
