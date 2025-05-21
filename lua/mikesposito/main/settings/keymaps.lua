@@ -75,6 +75,7 @@ label(K.WINDOW_, '[W]indow')
 n(K.WINDOW_TOGGLE_EXPLORER, '<Cmd>Neotree<CR>', { desc = 'Open file [E]xplorer' })
 n(K.WINDOW_TOGGLE_SYMBOLS, '<cmd>AerialToggle<cr>', { desc = '[S]ymbols' })
 n(K.WINDOW_TOGGLE_TERMINAL, '<Cmd>FloatermToggle<CR>', { desc = 'Toggle [T]erminal' })
+vim.api.nvim_set_keymap('t', K.WINDOW_TERMINAL_EXIT_INSERT, '<C-\\><C-n>', { noremap = true, silent = true })
 
 -- Diff keymaps
 n(K.DIFF_SHOW, '<Cmd>DiffviewOpen<CR>', { desc = '[D]iff' })
