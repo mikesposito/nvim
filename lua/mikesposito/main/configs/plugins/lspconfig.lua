@@ -36,18 +36,6 @@ return {
       }, bufnr)
     end
 
-    -- mason_lspconfig.setup_handlers {
-    --   function(server_name)
-    --     require('lspconfig')[server_name].setup {
-    --       capabilities = capabilities,
-    --       settings = P.LSP[server_name],
-    --       filetypes = (P.LSP[server_name] or {}).filetypes,
-    --       on_attach = on_lsp_attach,
-    --     }
-    --   end,
-    -- }
-    --
-
     local lspconfig = require 'lspconfig'
 
     for server_name, config in pairs(P.LSP) do
