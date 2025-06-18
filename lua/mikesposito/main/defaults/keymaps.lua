@@ -90,6 +90,8 @@ K.GITHUB_ISSUE_LIST = lead .. 'Gil'
 K.GITHUB_REVIEW_ = lead .. 'Gr'
 K.GITHUB_REVIEW_START = lead .. 'Grs'
 K.GITHUB_REVIEW_RESUME = lead .. 'Grr'
+K.GITHUB_DASH = lead .. 'Gd'
+K.GITHUB_ACTIONS = lead .. 'Ga'
 
 --- Search utilities
 K.SEARCH_ = lead .. 's'

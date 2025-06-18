@@ -117,6 +117,8 @@ n(K.GITHUB_ISSUE_LIST, '<cmd>Octo issue list<cr>', { desc = '[L]ist' })
 label(K.GITHUB_REVIEW_, '[R]eview')
 n(K.GITHUB_REVIEW_START, '<cmd>Octo review start<cr>', { desc = 'Start Review' })
 n(K.GITHUB_REVIEW_RESUME, '<cmd>Octo review resume<cr>', { desc = 'Resume Review' })
+n(K.GITHUB_DASH, ':FloatermNew --height=0.99 --width=0.99 gh dash<cr>', { desc = 'Open GitHub Dashboard' })
+n(K.GITHUB_ACTIONS, '<cmd>Pipeline<cr>', { desc = 'Open GitHub Actions' })
 
 -- Search keymaps
 label(K.SEARCH_, '[S]earch')
