@@ -119,6 +119,27 @@ n(K.GITHUB_REVIEW_START, '<cmd>Octo review start<cr>', { desc = 'Start Review' }
 n(K.GITHUB_REVIEW_RESUME, '<cmd>Octo review resume<cr>', { desc = 'Resume Review' })
 n(K.GITHUB_DASH, ':FloatermNew --height=0.99 --width=0.99 gh dash<cr>', { desc = 'Open GitHub Dashboard' })
 n(K.GITHUB_ACTIONS, '<cmd>Pipeline<cr>', { desc = 'Open GitHub Actions' })
+-- GitHub - Octo keymaps
+label(K.OCTO_, '[O]cto')
+-- --- PRs
+label(K.OCTO_PR_, '[P]ull requests')
+n(K.OCTO_PR_LIST, '<cmd>Octo pr list<cr>', { desc = '[L]ist' })
+n(K.OCTO_PR_SHOW, '<cmd>Octo pr show<cr>', { desc = '[S]how' })
+n(K.OCTO_PR_SHOW_CHANGES, '<cmd>Octo pr changes<cr>', { desc = '[C]hanges' })
+n(K.OCTO_PR_SHOW_DIFF, '<cmd>Octo pr diff<cr>', { desc = '[D]iff' })
+n(K.OCTO_PR_RELOAD, '<cmd>Octo pr reload<cr>', { desc = '[R]eload PR' })
+-- --- Reviews
+label(K.OCTO_REVIEW_, '[R]eview')
+n(K.OCTO_REVIEW_START, '<cmd>Octo review start<cr>', { desc = 'Start Review' })
+n(K.OCTO_REVIEW_RESUME, '<cmd>Octo review resume<cr>', { desc = 'Resume Review' })
+n(K.OCTO_REVIEW_SUBMIT, '<cmd>Octo review submit<cr>', { desc = 'Submit Review' })
+-- --- Issues
+label(K.OCTO_ISSUE_, '[I]ssues')
+n(K.OCTO_ISSUE_LIST, '<cmd>Octo issue list<cr>', { desc = '[L]ist' })
+n(K.OCTO_ISSUE_SHOW, '<cmd>Octo issue show<cr>', { desc = '[S]how' })
+n(K.OCTO_ISSUE_CREATE, '<cmd>Octo issue create<cr>', { desc = '[C]reate' })
+n(K.OCTO_ISSUE_CLOSE, '<cmd>Octo issue close<cr>', { desc = '[C]lose' })
+n(K.OCTO_ISSUE_EDIT, '<cmd>Octo issue edit<cr>', { desc = '[E]dit' })
 
 -- Search keymaps
 label(K.SEARCH_, '[S]earch')

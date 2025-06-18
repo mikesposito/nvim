@@ -93,6 +93,28 @@ K.GITHUB_REVIEW_RESUME = lead .. 'Grr'
 K.GITHUB_DASH = lead .. 'Gd'
 K.GITHUB_ACTIONS = lead .. 'Ga'
 
+--- GitHub - Octo keymaps
+--- --- PRs
+K.OCTO_ = lead .. 'o'
+K.OCTO_PR_ = lead .. 'op'
+K.OCTO_PR_LIST = lead .. 'opl'
+K.OCTO_PR_SHOW = lead .. 'ops'
+K.OCTO_PR_SHOW_CHANGES = lead .. 'opc'
+K.OCTO_PR_SHOW_DIFF = lead .. 'opd'
+K.OCTO_PR_RELOAD = lead .. 'opr'
+--- --- Reviews
+K.OCTO_REVIEW_ = lead .. 'or'
+K.OCTO_REVIEW_START = lead .. 'ors'
+K.OCTO_REVIEW_RESUME = lead .. 'orr'
+K.OCTO_REVIEW_SUBMIT = lead .. 'ors'
+--- --- Issues
+K.OCTO_ISSUE_ = lead .. 'oi'
+K.OCTO_ISSUE_LIST = lead .. 'oil'
+K.OCTO_ISSUE_SHOW = lead .. 'ois'
+K.OCTO_ISSUE_CREATE = lead .. 'oic'
+K.OCTO_ISSUE_EDIT = lead .. 'oie'
+K.OCTO_ISSUE_CLOSE = lead .. 'oic'
+
 --- Search utilities
 K.SEARCH_ = lead .. 's'
 K.SEARCH_FILES = lead .. 'sf'
