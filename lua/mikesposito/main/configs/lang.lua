@@ -8,5 +8,5 @@ return {
   require 'mikesposito.main.configs.plugins.rust-tools',
 
   -- Yarn tools
-  require 'mikesposito.main.configs.plugins.package-info',
+  -- require 'mikesposito.main.configs.plugins.package-info',
 }
