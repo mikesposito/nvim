@@ -5,8 +5,8 @@ local gitsigns = require 'gitsigns'
 -- local package_info = require 'package-info'
 local utils = require 'mikesposito.main.snippets.utils'
 local git = require 'mikesposito.main.snippets.git'
-local K = require 'custom.keymaps'
-local P = require 'custom.preferences'
+local K = require 'mikesposito.setup.keymaps'
+local P = require 'mikesposito.setup.preferences'
 
 local v = utils.vmap
 local n = utils.nmap

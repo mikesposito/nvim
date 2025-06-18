@@ -13,8 +13,8 @@ P.CODE_COPILOT_ENABLED = true
 P.CODE_FORMAT_ON_SAVE = true
 
 -- [Theme]
-P.THEME = 'mikesposito.main.configs.plugins.onedark-pro'
-P.THEME_COLOR_SCHEME = 'onedark_dark'
+P.THEME = 'mikesposito.main.configs.plugins.gruvbox'
+P.THEME_COLOR_SCHEME = 'gruvbox'
 
 -- [UI]
 -- Enable dimming of inactive code

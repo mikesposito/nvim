@@ -1,4 +1,4 @@
-local P = require 'custom.preferences'
+local P = require 'mikesposito.setup.preferences'
 
 -- Set <space> as the leader key
 -- See `:help mapleader`

@@ -1,4 +1,4 @@
-local P = require 'custom.preferences'
+local P = require 'mikesposito.setup.preferences'
 -- Configuration for colorschemes and themes
 
 return {
