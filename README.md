@@ -12,6 +12,7 @@ My personal Neovim configuration files.
 - [Lazygit](https://github.com/jesseduffield/lazygit) - The only graphical git interface you'll ever need
 - [Ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation) - For fast search
 - [gh](https://cli.github.com/) - For nice GitHub integrations (e.g. PR list, issue list, reviews, etc)
+  - (Optional) [gh-dash](https://github.com/dlvhdr/gh-dash?tab=readme-ov-file#-installation) - For a nice cli dashboard with PRs, issues, reviews, etc
 - (Optional) [Fzf](https://github.com/junegunn/fzf?tab=readme-ov-file#installation) - For ludicrous fast fuzzy search
 
 ### Installation
