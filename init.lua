@@ -3,5 +3,5 @@
 require 'mikesposito'
 
 -- Insert your custom configuration here
--- /lua/custom/init.lua
-require 'custom'
+-- /lua/mikesposito/setup/
+require 'mikesposito.setup'
