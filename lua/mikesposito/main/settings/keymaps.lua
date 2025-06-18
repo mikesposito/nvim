@@ -2,7 +2,7 @@ local dap = require 'dap'
 local dapui = require 'dapui'
 local telescope_builtin = require 'telescope.builtin'
 local gitsigns = require 'gitsigns'
-local package_info = require 'package-info'
+-- local package_info = require 'package-info'
 local utils = require 'mikesposito.main.snippets.utils'
 local git = require 'mikesposito.main.snippets.git'
 local K = require 'custom.keymaps'
@@ -159,6 +159,6 @@ if P.WINDOW_TABS_ENABLED then
 end
 
 -- Yarn Package management
-label(K.YARN_, '[Y]arn')
-n(K.YARN_ADD, package_info.install, { desc = '[A]dd package' })
-n(K.YARN_CHANGE_VERSION, package_info.change_version, { desc = 'Change package [V]ersion' })
+-- label(K.YARN_, '[Y]arn')
+-- n(K.YARN_ADD, package_info.install, { desc = '[A]dd package' })
+-- n(K.YARN_CHANGE_VERSION, package_info.change_version, { desc = 'Change package [V]ersion' })
