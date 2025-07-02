@@ -67,6 +67,23 @@ local lang_lsp_servers = {
   rust_analyzer = {
     filetypes = {
       'rust',
+    },
+    settings = {
+      ['rust-analyzer'] = {
+        checkOnSave = {
+          command = 'clippy',
+        },
+        cargo = {
+          allFeatures = true,
+        },
+        procMacro = {
+          enable = true,
+        },
+      },
+    },
+  },
+  taplo = {
+    filetypes = {
       'toml',
     },
   },

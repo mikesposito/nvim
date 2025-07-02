@@ -106,7 +106,7 @@ K.OCTO_PR_RELOAD = lead .. 'opr'
 K.OCTO_REVIEW_ = lead .. 'or'
 K.OCTO_REVIEW_START = lead .. 'ors'
 K.OCTO_REVIEW_RESUME = lead .. 'orr'
-K.OCTO_REVIEW_SUBMIT = lead .. 'ors'
+K.OCTO_REVIEW_SUBMIT = lead .. 'orS'
 --- --- Issues
 K.OCTO_ISSUE_ = lead .. 'oi'
 K.OCTO_ISSUE_LIST = lead .. 'oil'

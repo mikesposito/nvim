@@ -70,3 +70,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+-- Error messages in virtual text 
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { current_line = true } })
