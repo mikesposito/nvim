@@ -36,15 +36,13 @@ return {
       }, bufnr)
     end
 
-    local lspconfig = require 'lspconfig'
-
     for server_name, config in pairs(P.LSP) do
-      lspconfig[server_name].setup {
+      vim.lsp.config(server_name,  {
         capabilities = capabilities,
         settings = config,
         filetypes = config.filetypes,
         on_attach = on_lsp_attach,
-      }
+      });
     end
   end,
 }
