@@ -120,7 +120,7 @@ K.OCTO_ISSUE_LIST = lead .. 'oil'
 K.OCTO_ISSUE_SHOW = lead .. 'ois'
 K.OCTO_ISSUE_CREATE = lead .. 'oic'
 K.OCTO_ISSUE_EDIT = lead .. 'oie'
-K.OCTO_ISSUE_CLOSE = lead .. 'oic'
+K.OCTO_ISSUE_CLOSE = lead .. 'oix'
 
 --- Search utilities
 K.SEARCH_ = lead .. 's'
