@@ -4,6 +4,10 @@ local lead = '<leader>'
 --- Leader key
 K.LEADER = '<space>'
 
+--- General
+K.QUIT = 'q'
+K.SAVE_AND_QUIT = lead .. 'q'
+
 --- Panel splitting
 K.SPLIT_HORIZONTAL = '<C-->'
 K.SPLIT_VERTICAL = '<C-\\>'
@@ -102,9 +106,12 @@ K.OCTO_PR_SHOW = lead .. 'ops'
 K.OCTO_PR_SHOW_CHANGES = lead .. 'opc'
 K.OCTO_PR_SHOW_DIFF = lead .. 'opd'
 K.OCTO_PR_RELOAD = lead .. 'opr'
+K.OCTO_PR_ACTIONS = lead .. 'opa'
+K.OCTO_PR_URL = lead .. 'opu'
 --- --- Reviews
 K.OCTO_REVIEW_ = lead .. 'or'
 K.OCTO_REVIEW_START = lead .. 'ors'
+K.OCTO_REVIEW_CLOSE = lead .. 'orx'
 K.OCTO_REVIEW_RESUME = lead .. 'orr'
 K.OCTO_REVIEW_SUBMIT = lead .. 'orS'
 --- --- Issues

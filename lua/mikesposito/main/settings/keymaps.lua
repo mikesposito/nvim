@@ -23,6 +23,9 @@ n('j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 n('<C-d>', '<C-d>zz', { noremap = true, silent = true })
 n('<C-u>', '<C-u>zz', { noremap = true, silent = true })
 
+-- General
+n(K.SAVE_AND_QUIT, '<Cmd>wq<CR>', { desc = 'Save and quit' })
+
 -- Panel splitting
 n(K.SPLIT_HORIZONTAL, '<Cmd>split<CR>', { desc = 'Split horizontally' })
 n(K.SPLIT_VERTICAL, '<Cmd>vsplit<CR>', { desc = 'Split vertically' })
@@ -128,9 +131,12 @@ n(K.OCTO_PR_SHOW, '<cmd>Octo pr show<cr>', { desc = '[S]how' })
 n(K.OCTO_PR_SHOW_CHANGES, '<cmd>Octo pr changes<cr>', { desc = '[C]hanges' })
 n(K.OCTO_PR_SHOW_DIFF, '<cmd>Octo pr diff<cr>', { desc = '[D]iff' })
 n(K.OCTO_PR_RELOAD, '<cmd>Octo pr reload<cr>', { desc = '[R]eload PR' })
+n(K.OCTO_PR_ACTIONS, '<cmd>Octo pr checks<cr>', { desc = '[A]ctions' })
+n(K.OCTO_PR_URL, '<cmd>Octo pr url<cr>', { desc = '[U]RL' })
 -- --- Reviews
 label(K.OCTO_REVIEW_, '[R]eview')
 n(K.OCTO_REVIEW_START, '<cmd>Octo review start<cr>', { desc = 'Start Review' })
+n(K.OCTO_REVIEW_CLOSE, '<cmd>Octo review close<cr>', { desc = 'Close Review' })
 n(K.OCTO_REVIEW_RESUME, '<cmd>Octo review resume<cr>', { desc = 'Resume Review' })
 n(K.OCTO_REVIEW_SUBMIT, '<cmd>Octo review submit<cr>', { desc = 'Submit Review' })
 -- --- Issues
