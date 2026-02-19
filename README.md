@@ -46,6 +46,194 @@ The default editor preferences can be found here:
 
 You can add any custom configuration in the `lua/mikesposito/setup` folder, so you can keep pulling updates from this repository (hopefully) without conflicts.
 
+## Plugins
+
+### AI / Code Assistance
+
+| Plugin | Description |
+|--------|-------------|
+| [copilot.vim](https://github.com/github/copilot.vim) | GitHub Copilot AI pair programming assistant |
+| [gp.nvim](https://github.com/robitx/gp.nvim) | ChatGPT-style AI assistant for code generation and chat |
+
+### Completion
+
+| Plugin | Description |
+|--------|-------------|
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Autocompletion framework with multiple source support |
+| [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) | LSP source for nvim-cmp |
+| [cmp-path](https://github.com/hrsh7th/cmp-path) | Path completion source for nvim-cmp |
+| [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip) | LuaSnip snippet source for nvim-cmp |
+| [LuaSnip](https://github.com/L3MON4D3/LuaSnip) | Fast snippet engine written in Lua |
+| [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Collection of snippets for various languages |
+
+### LSP
+
+| Plugin | Description |
+|--------|-------------|
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | Quickstart configurations for the Neovim LSP client |
+| [mason.nvim](https://github.com/williamboman/mason.nvim) | Portable package manager for LSP servers, DAP servers, linters, and formatters |
+| [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) | Bridge between mason.nvim and nvim-lspconfig |
+| [fidget.nvim](https://github.com/j-hui/fidget.nvim) | LSP progress notifications |
+| [neodev.nvim](https://github.com/folke/neodev.nvim) | Enhanced Lua development for Neovim config |
+| [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim) | Function signature hints as you type |
+| [nvim-navic](https://github.com/SmiteshP/nvim-navic) | Breadcrumb navigation using LSP symbols |
+
+### Syntax & Treesitter
+
+| Plugin | Description |
+|--------|-------------|
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Advanced syntax highlighting and code parsing |
+| [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) | Syntax-aware text objects for functions, classes, and parameters |
+| [nvim-tree-docs](https://github.com/nvim-treesitter/nvim-tree-docs) | Documentation comments generation |
+
+### Debugging
+
+| Plugin | Description |
+|--------|-------------|
+| [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol client |
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | UI for nvim-dap debugger |
+| [nvim-dap-go](https://github.com/leoluz/nvim-dap-go) | Go debugging extension with Delve integration |
+| [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim) | Bridge between mason.nvim and nvim-dap |
+
+### Diagnostics
+
+| Plugin | Description |
+|--------|-------------|
+| [trouble.nvim](https://github.com/folke/trouble.nvim) | Pretty diagnostics, references, and quickfix list viewer |
+
+### Git
+
+| Plugin | Description |
+|--------|-------------|
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git signs in the gutter for added/changed/deleted lines |
+| [vim-fugitive](https://github.com/tpope/vim-fugitive) | Comprehensive Git wrapper |
+| [diffview.nvim](https://github.com/sindrets/diffview.nvim) | Tabpage interface for viewing git diffs and file history |
+| [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim) | Generate shareable permalinks to files |
+| [octo.nvim](https://github.com/pwntester/octo.nvim) | GitHub issues and pull requests management |
+| [pipeline.nvim](https://github.com/topaxi/pipeline.nvim) | View and interact with GitHub/GitLab CI/CD pipelines |
+
+### File Navigation
+
+| Plugin | Description |
+|--------|-------------|
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Highly extendable fuzzy finder |
+| [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | FZF-native sorter for telescope |
+| [fzf](https://github.com/junegunn/fzf) | Command-line fuzzy finder |
+| [fzf.vim](https://github.com/junegunn/fzf.vim) | Vim integration for fzf |
+| [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) | Modern file explorer tree |
+| [aerial.nvim](https://github.com/stevearc/aerial.nvim) | Code outline window for navigating symbols |
+
+### UI / Window Management
+
+| Plugin | Description |
+|--------|-------------|
+| [barbar.nvim](https://github.com/romgrk/barbar.nvim) | Tabline showing buffers as tabs |
+| [barbecue.nvim](https://github.com/utilyre/barbecue.nvim) | VS Code-like winbar with breadcrumbs |
+| [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Fast and configurable statusline |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | Displays available keybindings in a popup |
+| [mini.starter](https://github.com/echasnovski/mini.starter) | Fast and flexible start screen |
+| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | Indentation guides as vertical lines |
+| [mini.indentscope](https://github.com/echasnovski/mini.indentscope) | Animated current scope indicator |
+| [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | File type icons |
+| [nui.nvim](https://github.com/MunifTanjim/nui.nvim) | UI component library |
+
+### Terminal
+
+| Plugin | Description |
+|--------|-------------|
+| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Persist and toggle multiple terminals |
+| [vim-floaterm](https://github.com/voldikss/vim-floaterm) | Floating terminal window manager |
+
+### Tmux Integration
+
+| Plugin | Description |
+|--------|-------------|
+| [nvim-tmux-navigation](https://github.com/alexghergh/nvim-tmux-navigation) | Seamless navigation between Neovim splits and tmux panes |
+
+### Editing
+
+| Plugin | Description |
+|--------|-------------|
+| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Smart commenting plugin |
+| [nvim-autopairs](https://github.com/windwp/nvim-autopairs) | Auto-insert matching brackets and quotes |
+| [local-highlight.nvim](https://github.com/tzachar/local-highlight.nvim) | Highlights word under cursor |
+| [vim-sleuth](https://github.com/tpope/vim-sleuth) | Automatically detects indentation settings |
+
+### Formatting
+
+| Plugin | Description |
+|--------|-------------|
+| [conform.nvim](https://github.com/stevearc/conform.nvim) | Lightweight formatter supporting multiple formatters per filetype |
+
+### Markdown
+
+| Plugin | Description |
+|--------|-------------|
+| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Live markdown preview in browser |
+| [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim) | Renders markdown directly in buffer |
+
+### Highlighting
+
+| Plugin | Description |
+|--------|-------------|
+| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | Highlights TODO, FIXME, BUG, and other comment keywords |
+
+### Theme
+
+| Plugin | Description |
+|--------|-------------|
+| [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim) | Gruvbox colorscheme for Neovim |
+
+### Utilities
+
+| Plugin | Description |
+|--------|-------------|
+| [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) | Lua utility functions library |
+| [lazy.nvim](https://github.com/folke/lazy.nvim) | Modern plugin manager with lazy-loading |
+| [image.nvim](https://github.com/3rd/image.nvim) | Image preview support |
+
+## Language Servers (Mason)
+
+LSP servers are automatically installed and managed via [Mason](https://github.com/williamboman/mason.nvim). The following language servers are configured by default:
+
+| LSP Server | Languages | Description |
+|------------|-----------|-------------|
+| `rust_analyzer` | Rust | Full-featured Rust language support with Clippy integration |
+| `taplo` | TOML | TOML file support and validation |
+| `ts_ls` | TypeScript, JavaScript | TypeScript/JavaScript language server |
+| `eslint` | TypeScript, JavaScript | JavaScript/TypeScript linting |
+| `clangd` | C, C++ | C/C++ language server from LLVM |
+| `html` | HTML, Twig, Handlebars | HTML language features |
+| `solidity_ls_nomicfoundation` | Solidity | Solidity smart contract development |
+| `lua_ls` | Lua | Lua language server (great for Neovim config) |
+| `vimls` | Vim | Vim script language support |
+
+### Adding or Customizing LSP Servers
+
+To add new LSP servers or customize existing ones, edit the `P.LSP` table in `lua/mikesposito/setup/preferences.lua`:
+
+```lua
+P.LSP = {
+  -- Add a new server
+  pyright = {
+    filetypes = { 'python' },
+  },
+  -- Customize an existing server
+  rust_analyzer = {
+    filetypes = { 'rust' },
+    settings = {
+      ['rust-analyzer'] = {
+        checkOnSave = {
+          command = 'clippy',
+        },
+      },
+    },
+  },
+}
+```
+
+You can find available LSP servers in the [Mason registry](https://mason-registry.dev/registry/list).
+
 ## Keymaps
 
 `<leader>` is mapped to `<space>`.
