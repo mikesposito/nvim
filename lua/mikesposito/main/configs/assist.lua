@@ -6,6 +6,9 @@ return {
   -- GitHub Copilot (AI pair programming)
   P.CODE_COPILOT_ENABLED and require 'mikesposito.main.configs.plugins.copilot' or {},
 
+  -- GP Nvim (AI suggestions and agents)
+  P.GP_ENABLED and require 'mikesposito.main.configs.plugins.gp-nvim' or {},
+
   -- Highlight similar words
   require 'mikesposito.main.configs.plugins.local_highlight',
 

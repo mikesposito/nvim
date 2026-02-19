@@ -6,6 +6,10 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    require('octo').setup()
+    require"octo".setup({
+      timeline = {
+        project_v2_events = false,
+      },
+    })
   end,
 }

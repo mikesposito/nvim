@@ -4,4 +4,6 @@ local P = require 'mikesposito.main.defaults.preferences'
 -- from `lua/mikesposito/main/defaults/preferences.lua`
 -- and then override it with your own here.
 
+P.GP_ENABLED = true
+
 return P

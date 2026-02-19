@@ -11,6 +11,18 @@ P.CODE_AUTOCOMPLETION_ENABLED = true
 P.CODE_COPILOT_ENABLED = true
 -- Format the document automatically on save
 P.CODE_FORMAT_ON_SAVE = true
+-- GP Nvim AI suggestions and agents
+P.GP_ENABLED = false
+P.GP_CONFIG = {
+  copilot = {
+    endpoint = "https://api.githubcopilot.com/chat/completions",
+    secret = {
+      "bash",
+      "-c",
+      "cat ~/.config/github-copilot/apps.json | sed -e 's/.*oauth_token...//;s/\".*//'",
+    },
+  },
+}
 
 -- [Theme]
 P.THEME = 'mikesposito.main.configs.plugins.gruvbox'
