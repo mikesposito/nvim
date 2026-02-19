@@ -27,6 +27,9 @@ return {
   -- Markdown preview
   require 'mikesposito.main.configs.plugins.markdown-preview',
 
+  -- Markdown rendering
+  require 'mikesposito.main.configs.plugins.render-markdown',
+
   -- TODOs highlighting
   require 'mikesposito.main.configs.plugins.todo-comments',
 }
