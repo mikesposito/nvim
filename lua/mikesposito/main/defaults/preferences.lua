@@ -127,6 +127,11 @@ local lang_lsp_servers = {
       'hbs',
     },
   },
+  solidity_ls_nomicfoundation = {
+    filetypes = {
+      'solidity',
+    },
+  },
   lua_ls = {
     Lua = {
       workspace = {
